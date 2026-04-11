@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Nancan — Pedidos Mayoristas</title>
   <link rel="icon" type="image/png" href="nancan_whatsapp.png">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
@@ -11,169 +11,189 @@
       --primary: #FF6B35;
       --secondary: #FFD93D;
       --dark: #1A1A2E;
-      --bg: #F8F9FA;
+      --bg: #F0F2F5;
       --white: #ffffff;
       --whatsapp: #25D366;
-      --text-muted: #6c757d;
-      --border: #e9ecef;
+      --text-main: #2D3436;
+      --text-muted: #636E72;
+      --border: #DFE6E9;
+      --radius: 16px;
+      --shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    
     body { 
       font-family: 'Nunito', sans-serif; 
       background: var(--bg); 
-      color: var(--dark); 
-      padding-bottom: 140px; 
+      color: var(--text-main); 
+      padding-bottom: 160px;
+      -webkit-tap-highlight-color: transparent;
     }
 
-    /* Header */
+    /* Header Estilo App */
     header {
-      background: var(--dark);
+      background: rgba(26, 26, 46, 0.95);
+      backdrop-filter: blur(10px);
       color: white;
-      padding: 1rem;
-      border-bottom: 4px solid var(--secondary);
+      padding: 1rem 1.2rem;
       position: sticky;
       top: 0;
       z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
     }
     .header-content {
-      max-width: 1000px;
+      max-width: 800px;
       margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
+    .logo-area { display: flex; align-items: center; gap: 10px; }
+    .logo-img { width: 35px; height: 35px; border-radius: 8px; }
+    h1 { font-size: 1.2rem; letter-spacing: 1px; font-weight: 900; }
+
     .product-count {
       background: var(--primary);
-      padding: 6px 12px;
-      border-radius: 50px;
-      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-weight: 900;
       font-size: 0.8rem;
     }
 
-    /* Controles */
+    /* Buscador */
     .controls {
-      max-width: 1000px;
-      margin: 20px auto;
+      max-width: 800px;
+      margin: 15px auto;
       padding: 0 15px;
-      display: grid;
-      grid-template-columns: 2fr 1fr auto;
+      display: flex;
+      flex-direction: column;
       gap: 10px;
     }
     input, select {
-      padding: 12px;
-      border: 2px solid var(--border);
-      border-radius: 12px;
-      font-size: 1rem;
-      outline: none;
-    }
-    input:focus { border-color: var(--primary); }
-    .btn-clear {
-      background: #eee;
+      padding: 14px 20px;
       border: none;
-      padding: 0 15px;
-      border-radius: 12px;
-      cursor: pointer;
+      border-radius: 25px;
+      font-size: 16px;
+      outline: none;
+      background: var(--white);
+      box-shadow: var(--shadow);
     }
 
-    /* Lista de Productos */
-    .table-container {
-      max-width: 1000px;
+    /* Contenedor de Tarjetas */
+    .products-container {
+      max-width: 800px;
       margin: 0 auto;
-      background: white;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    }
-    table { width: 100%; border-collapse: collapse; }
-    th { background: #fafafa; padding: 15px; text-align: left; font-size: 0.8rem; color: var(--text-muted); border-bottom: 1px solid var(--border); }
-    td { padding: 12px 15px; border-bottom: 1px solid var(--border); vertical-align: middle; }
-    
-    /* Estilo de la Fila de Producto con Foto */
-    .prod-row { display: flex; align-items: center; gap: 12px; }
-    .prod-img { 
-      width: 55px; 
-      height: 55px; 
-      object-fit: contain; 
-      background: #f9f9f9; 
-      border-radius: 8px; 
-      border: 1px solid #eee;
-      cursor: zoom-in; /* Indica que se puede agrandar */
-      transition: transform 0.2s;
-    }
-    .prod-img:hover { transform: scale(1.05); }
-
-    .prod-info { display: flex; flex-direction: column; }
-    .p-name { font-weight: 700; font-size: 0.9rem; line-height: 1.2; }
-    .p-meta { font-size: 0.7rem; color: var(--text-muted); }
-    .tag-prov { 
-        font-size: 0.6rem; 
-        background: #eef2ff; 
-        color: #4338ca; 
-        padding: 2px 6px; 
-        border-radius: 4px; 
-        width: fit-content; 
-        margin-top: 4px;
-        font-weight: bold;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 0 15px;
     }
 
-    .price { font-weight: 900; color: var(--primary); font-size: 1.1rem; }
-
-    /* Cantidades */
-    .qty-control {
+    .prod-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 12px;
       display: flex;
       align-items: center;
-      background: #f1f3f5;
-      padding: 3px;
-      border-radius: 10px;
+      gap: 12px;
+      box-shadow: var(--shadow);
+      transition: all 0.2s ease;
+      border: 2px solid transparent;
+    }
+    .prod-card.in-cart { 
+      border-color: var(--primary);
+      background: #fffaf8;
+    }
+
+    .prod-img {
+      width: 85px;
+      height: 85px;
+      border-radius: 12px;
+      object-fit: cover;
+      background: #f8f9fa;
+      cursor: zoom-in;
+      flex-shrink: 0;
+    }
+
+    /* Información del Producto - Protegida contra desbordamiento */
+    .prod-info { 
+      flex: 1; 
+      min-width: 0; /* Permite que el texto se trunque */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .p-name { 
+      font-weight: 800; 
+      font-size: 0.95rem; 
+      line-height: 1.2;
+      margin-bottom: 4px;
+      /* Truncar a 2 líneas */
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;  
+      overflow: hidden;
+    }
+    
+    .p-meta { font-size: 0.75rem; color: var(--text-muted); font-weight: 700; }
+    
+    .tag-prov { 
+      font-size: 0.65rem; 
+      background: #eef2ff; 
+      color: #4338ca; 
+      padding: 2px 6px; 
+      border-radius: 4px; 
+      font-weight: 800; 
       width: fit-content;
+      margin-top: 2px;
+      text-transform: uppercase;
+    }
+
+    .price { color: var(--primary); font-weight: 900; font-size: 1.1rem; margin-top: 4px; }
+
+    /* Botones de Cantidad Verticales y Fijos */
+    .qty-control {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #F1F3F5;
+      border-radius: 12px;
+      padding: 6px;
+      gap: 4px;
+      flex-shrink: 0; /* No permite que los botones se achiquen */
+      width: 44px;    /* Ancho fijo de seguridad */
     }
     .qty-btn {
-      border: none;
-      background: white;
-      width: 28px;
-      height: 28px;
-      border-radius: 7px;
-      cursor: pointer;
-      font-weight: 900;
+      width: 32px; height: 32px; border-radius: 8px; border: none;
+      background: var(--white); font-weight: 900; cursor: pointer; 
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      font-size: 1.2rem;
+      display: flex; align-items: center; justify-content: center;
     }
-    .qty-num { width: 30px; text-align: center; font-weight: 800; }
+    .qty-btn:active { transform: scale(0.9); }
+    .qty-num { font-weight: 900; font-size: 1rem; color: var(--dark); margin: 2px 0; }
 
-    /* Modal de Imagen Agrandada */
+    /* Modal */
     .modal {
-      display: none;
-      position: fixed;
-      z-index: 2000;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background-color: rgba(0,0,0,0.85);
-      align-items: center;
-      justify-content: center;
-      cursor: zoom-out;
+      display: none; position: fixed; z-index: 2000; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9); align-items: center; justify-content: center; padding: 20px;
     }
-    .modal-content {
-      max-width: 90%;
-      max-height: 80%;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.5);
-    }
+    .modal img { max-width: 100%; max-height: 80%; border-radius: 12px; box-shadow: 0 0 30px rgba(0,0,0,0.5); }
 
-    /* Footer */
+    /* Footer Flotante */
     footer {
-      position: fixed; bottom: 0; left: 0; right: 0;
-      background: white; padding: 20px; border-top: 2px solid var(--border);
-      z-index: 1000;
+      position: fixed; bottom: 20px; left: 15px; right: 15px;
+      background: var(--dark); color: white; border-radius: 20px;
+      padding: 15px 20px; z-index: 1000; box-shadow: 0 8px 30px rgba(0,0,0,0.3);
     }
-    .footer-flex { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-    .total-val { font-size: 1.5rem; font-weight: 900; color: var(--primary); }
+    .footer-flex { max-width: 800px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .total-val { font-size: 1.4rem; font-weight: 900; color: var(--secondary); }
     .btn-order {
-      background: var(--whatsapp); color: white; border: none; padding: 12px 25px;
-      border-radius: 12px; font-weight: 900; cursor: pointer; font-size: 1rem;
-    }
-
-    @media (max-width: 600px) {
-      .controls { grid-template-columns: 1fr; }
-      .p-name { font-size: 0.8rem; }
-      .prod-img { width: 45px; height: 45px; }
+      background: var(--whatsapp); color: white; border: none; padding: 12px 20px;
+      border-radius: 12px; font-weight: 900; cursor: pointer; font-size: 0.9rem;
+      text-transform: uppercase;
     }
   </style>
 </head>
@@ -181,8 +201,11 @@
 
 <header>
   <div class="header-content">
-    <h1>NANCAN</h1>
-    <div class="product-count" id="countBadge">0 Unidades</div>
+    <div class="logo-area">
+      <img src="nancan_whatsapp.png" class="logo-img" onerror="this.style.display='none'">
+      <h1>NANCAN</h1>
+    </div>
+    <div class="product-count" id="countBadge">0 Items</div>
   </div>
 </header>
 
@@ -191,51 +214,38 @@
   <select id="f" onchange="updateList()">
     <option value="">Todos los Proveedores</option>
   </select>
-  <button class="btn-clear" onclick="clearCart()">🗑️</button>
 </div>
 
-<div class="table-container">
-  <table>
-    <thead>
-      <tr>
-        <th>Producto</th>
-        <th>Precio</th>
-        <th>Pedido</th>
-      </tr>
-    </thead>
-    <tbody id="list"></tbody>
-  </table>
-</div>
+<div id="list" class="products-container"></div>
 
-<div id="imgModal" class="modal" onclick="closeModal()">
-  <img class="modal-content" id="modalImg">
+<div id="imgModal" class="modal" onclick="this.style.display='none'">
+  <img id="modalImg">
 </div>
 
 <footer>
   <div class="footer-flex">
     <div>
-      <div style="font-size: 0.7rem; color: gray; font-weight: 800;">TOTAL MAYORISTA</div>
+      <div style="font-size:0.6rem; color:#aaa; font-weight:800; text-transform:uppercase;">Total Pedido</div>
       <div class="total-val" id="total">$ 0</div>
     </div>
-    <button class="btn-order" onclick="sendOrder()">Enviar Pedido</button>
+    <button class="btn-order" onclick="send()">Enviar Pedido</button>
   </div>
 </footer>
 
 <script>
-// Base de datos (asegúrate de incluir todos tus productos aquí)
+// --- BASE DE DATOS ---
 const db = [
   {"c":"IKCAP001","d":"CAPIBARA C/MOCHILA","p":"ISAKITO","pv":34100,"pm":15000},
   {"c":"7108","d":"CARS MACK GRANDE A FRICCION","p":"ARBREX","pv":96850,"pm":41970},
   {"c":"2985","d":"MOTOR SPEED MOTO DIE CAST","p":"DITOYS","pv":5800,"pm":2900},
   {"c":"C4982","d":"HW AUTO BASICO","p":"SUR LATINA","pv":6500,"pm":3490},
-  {"c":"D013","d":"VALIJA JULIANA DOCTORA GRANDE","p":"SISFRIENDS","pv":44990,"pm":22900},
-  {"c":"99547","d":"CRY BABIES 13 CM","p":"WABRO","pv":15000,"pm":5500},
-  {"c":"F123","d":"NERF ELITE 2.0","p":"WABRO","pv":28000,"pm":12500},
-  {"c":"70990","d":"PLAYMOBIL NINJA","p":"INTEK","pv":29990,"pm":13500}
+  {"c":"EO100","d":"PELUCHES POP-UP HEROES DESCRIPCION MUY LARGA PARA PROBAR EL CORTE DE TEXTO","p":"ARBREX","pv":29900,"pm":12852}
+  // Añade aquí el resto de tus productos...
 ];
 
 const dbIndex = Object.fromEntries(db.map(x => [x.c, x]));
-let cart = JSON.parse(localStorage.getItem("cart")) || {};
+let cart = JSON.parse(localStorage.getItem("nancan_cart")) || {};
+let debounceTimer;
 
 function init() {
   const provs = [...new Set(db.map(x => x.p))].sort();
@@ -249,50 +259,50 @@ function init() {
   calc();
 }
 
+// Buscador Optimizado con Debounce
 function updateList() {
-  const q = document.getElementById('q').value.toLowerCase();
-  const f = document.getElementById('f').value;
-  const list = document.getElementById('list');
-  list.innerHTML = '';
+  clearTimeout(debounceTimer);
+  debounceTimer = setTimeout(() => {
+    const q = document.getElementById('q').value.toLowerCase().trim();
+    const f = document.getElementById('f').value;
+    const list = document.getElementById('list');
+    
+    const filtered = db.filter(x => {
+      const matchQ = x.d.toLowerCase().includes(q) || x.c.toLowerCase().includes(q);
+      const matchF = !f || x.p === f;
+      return matchQ && matchF;
+    });
 
-  const filtered = db.filter(x => {
-    const matchQ = x.d.toLowerCase().includes(q) || x.c.toLowerCase().includes(q);
-    const matchF = !f || x.p === f;
-    return matchQ && matchF;
-  });
-
-  filtered.forEach(x => {
-    const n = cart[x.c] || 0;
-    const tr = document.createElement('tr');
-    const fotoUrl = `fotos/${x.c}.jpg`;
-
-    tr.innerHTML = `
-      <td>
-        <div class="prod-row">
-          <img src="${fotoUrl}" class="prod-img" 
-               onclick="openModal('${fotoUrl}')" 
-               onerror="this.src='https://placehold.co/100x100?text=Toy'; this.onclick=null;">
-          <div class="prod-info">
-            <span class="p-name">${x.d}</span>
-            <span class="p-meta">Cód: ${x.c}</span>
-            <span class="tag-prov">${x.p}</span>
-          </div>
+    const fragment = document.createDocumentFragment();
+    filtered.forEach(x => {
+      const n = cart[x.c] || 0;
+      const card = document.createElement('div');
+      card.className = `prod-card ${n > 0 ? 'in-cart' : ''}`;
+      const fotoUrl = `fotos/${x.c}.jpg`;
+      
+      card.innerHTML = `
+        <img src="${fotoUrl}" class="prod-img" onclick="event.stopPropagation(); openModal('${fotoUrl}')" 
+             onerror="this.src='https://placehold.co/150x150?text=📦'; this.onclick=null;">
+        <div class="prod-info">
+          <div class="p-name">${x.d}</div>
+          <span class="p-meta">Cód: ${x.c}</span>
+          <div class="tag-prov">${x.p}</div>
+          <div class="price">$${x.pm.toLocaleString()}</div>
         </div>
-      </td>
-      <td><div class="price">$${x.pm.toLocaleString()}</div></td>
-      <td>
         <div class="qty-control">
-          <button class="qty-btn" onclick="changeQty('${x.c}', -1)">-</button>
+          <button class="qty-btn" onclick="change('${x.c}', 1)">+</button>
           <span class="qty-num" id="n-${x.c}">${n}</span>
-          <button class="qty-btn" onclick="changeQty('${x.c}', 1)">+</button>
+          <button class="qty-btn" onclick="change('${x.c}', -1)">−</button>
         </div>
-      </td>
-    `;
-    list.appendChild(tr);
-  });
+      `;
+      fragment.appendChild(card);
+    });
+
+    list.innerHTML = '';
+    list.appendChild(fragment);
+  }, 150);
 }
 
-// Funciones para el Modal
 function openModal(src) {
   const modal = document.getElementById("imgModal");
   const modalImg = document.getElementById("modalImg");
@@ -300,18 +310,19 @@ function openModal(src) {
   modalImg.src = src;
 }
 
-function closeModal() {
-  document.getElementById("imgModal").style.display = "none";
-}
-
-function changeQty(c, d) {
+function change(c, d) {
   cart[c] = (cart[c] || 0) + d;
   if (cart[c] <= 0) delete cart[c];
   
   const el = document.getElementById(`n-${c}`);
-  if (el) el.textContent = cart[c] || 0;
+  if (el) {
+    el.textContent = cart[c] || 0;
+    const card = el.closest('.prod-card');
+    if (cart[c] > 0) card.classList.add('in-cart');
+    else card.classList.remove('in-cart');
+  }
 
-  localStorage.setItem("cart", JSON.stringify(cart));
+  localStorage.setItem("nancan_cart", JSON.stringify(cart));
   calc();
 }
 
@@ -319,39 +330,26 @@ function calc() {
   let t = 0, items = 0;
   for (let c in cart) {
     const x = dbIndex[c];
-    if (x) {
-      t += x.pm * cart[c];
-      items += cart[c];
-    }
+    if (x) { t += x.pm * cart[c]; items += cart[c]; }
   }
   document.getElementById('total').textContent = `$ ${t.toLocaleString()}`;
-  document.getElementById('countBadge').textContent = `${items} Unidades`;
+  document.getElementById('countBadge').textContent = `${items} Items`;
 }
 
-function clearCart() {
-  if (confirm("¿Vaciar el pedido actual?")) {
-    cart = {};
-    localStorage.removeItem("cart");
-    updateList();
-    calc();
-  }
-}
-
-function sendOrder() {
+function send() {
   const keys = Object.keys(cart);
-  if (keys.length === 0) return alert("El carrito está vacío.");
+  if (keys.length === 0) return alert("Seleccioná productos primero.");
 
   let m = "🧾 *PEDIDO MAYORISTA - NANCAN*\n\n";
-  let totalCash = 0;
-
+  let cash = 0;
   keys.forEach(c => {
     const x = dbIndex[c];
     const sub = x.pm * cart[c];
-    m += `• ${x.d}\n   Cant: ${cart[c]} | Sub: $${sub.toLocaleString()}\n`;
-    totalCash += sub;
+    // Formato de WhatsApp: Artículo [Código] x Cantidad
+    m += `• *${x.d}* [${c}]\n   Cant: ${cart[c]} | Sub: $${sub.toLocaleString()}\n\n`;
+    cash += sub;
   });
-
-  m += `\n━━━━━━━━━━━━━━\n*TOTAL: $${totalCash.toLocaleString()}*`;
+  m += `━━━━━━━━━━━━━━\n*TOTAL PEDIDO: $${cash.toLocaleString()}*`;
   window.open(`https://wa.me/5492235527149?text=${encodeURIComponent(m)}`);
 }
 
