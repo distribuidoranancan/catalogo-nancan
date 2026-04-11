@@ -31,7 +31,6 @@
       -webkit-tap-highlight-color: transparent;
     }
 
-    /* Header Estilo App */
     header {
       background: rgba(26, 26, 46, 0.95);
       backdrop-filter: blur(10px);
@@ -49,46 +48,13 @@
       align-items: center;
       justify-content: space-between;
     }
-    .logo-area { display: flex; align-items: center; gap: 10px; }
-    .logo-img { width: 35px; height: 35px; border-radius: 8px; }
     h1 { font-size: 1.2rem; letter-spacing: 1px; font-weight: 900; }
+    .product-count { background: var(--primary); padding: 4px 12px; border-radius: 20px; font-weight: 900; font-size: 0.8rem; }
 
-    .product-count {
-      background: var(--primary);
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-weight: 900;
-      font-size: 0.8rem;
-    }
+    .controls { max-width: 800px; margin: 15px auto; padding: 0 15px; display: flex; flex-direction: column; gap: 10px; }
+    input, select { padding: 14px 20px; border: none; border-radius: 25px; font-size: 16px; outline: none; background: var(--white); box-shadow: var(--shadow); width: 100%; }
 
-    /* Buscador */
-    .controls {
-      max-width: 800px;
-      margin: 15px auto;
-      padding: 0 15px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    input, select {
-      padding: 14px 20px;
-      border: none;
-      border-radius: 25px;
-      font-size: 16px;
-      outline: none;
-      background: var(--white);
-      box-shadow: var(--shadow);
-    }
-
-    /* Contenedor de Tarjetas */
-    .products-container {
-      max-width: 800px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      padding: 0 15px;
-    }
+    .products-container { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; padding: 0 15px; }
 
     .prod-card {
       background: var(--white);
@@ -101,116 +67,47 @@
       transition: all 0.2s ease;
       border: 2px solid transparent;
     }
-    .prod-card.in-cart { 
-      border-color: var(--primary);
-      background: #fffaf8;
-    }
+    .prod-card.in-cart { border-color: var(--primary); background: #fffaf8; }
 
-    .prod-img {
-      width: 85px;
-      height: 85px;
-      border-radius: 12px;
-      object-fit: cover;
-      background: #f8f9fa;
-      cursor: zoom-in;
-      flex-shrink: 0;
-    }
+    .prod-img { width: 85px; height: 85px; border-radius: 12px; object-fit: cover; background: #f8f9fa; cursor: zoom-in; flex-shrink: 0; }
 
-    /* Información del Producto - Protegida contra desbordamiento */
-    .prod-info { 
-      flex: 1; 
-      min-width: 0; /* Permite que el texto se trunque */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    
+    .prod-info { flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: center; }
     .p-name { 
-      font-weight: 800; 
-      font-size: 0.95rem; 
-      line-height: 1.2;
-      margin-bottom: 4px;
-      /* Truncar a 2 líneas */
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;  
-      overflow: hidden;
+      font-weight: 800; font-size: 0.95rem; line-height: 1.2; margin-bottom: 4px;
+      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
     }
-    
     .p-meta { font-size: 0.75rem; color: var(--text-muted); font-weight: 700; }
-    
-    .tag-prov { 
-      font-size: 0.65rem; 
-      background: #eef2ff; 
-      color: #4338ca; 
-      padding: 2px 6px; 
-      border-radius: 4px; 
-      font-weight: 800; 
-      width: fit-content;
-      margin-top: 2px;
-      text-transform: uppercase;
-    }
+    .tag-prov { font-size: 0.65rem; background: #eef2ff; color: #4338ca; padding: 2px 6px; border-radius: 4px; font-weight: 800; width: fit-content; margin-top: 2px; }
 
-    .price { color: var(--primary); font-weight: 900; font-size: 1.1rem; margin-top: 4px; }
+    .price-area { margin-top: 6px; }
+    .price-main { color: var(--primary); font-weight: 900; font-size: 1.1rem; }
+    .price-label { font-size: 0.6rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase; }
+    .price-sug { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
 
-    /* Botones de Cantidad Verticales y Fijos */
-    .qty-control {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background: #F1F3F5;
-      border-radius: 12px;
-      padding: 6px;
-      gap: 4px;
-      flex-shrink: 0; /* No permite que los botones se achiquen */
-      width: 44px;    /* Ancho fijo de seguridad */
-    }
-    .qty-btn {
-      width: 32px; height: 32px; border-radius: 8px; border: none;
-      background: var(--white); font-weight: 900; cursor: pointer; 
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      font-size: 1.2rem;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .qty-btn:active { transform: scale(0.9); }
+    .qty-control { display: flex; flex-direction: column; align-items: center; background: #F1F3F5; border-radius: 12px; padding: 6px; gap: 4px; flex-shrink: 0; width: 44px; }
+    .qty-btn { width: 32px; height: 32px; border-radius: 8px; border: none; background: var(--white); font-weight: 900; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.1); font-size: 1.2rem; display: flex; align-items: center; justify-content: center; }
     .qty-num { font-weight: 900; font-size: 1rem; color: var(--dark); margin: 2px 0; }
 
-    /* Modal */
-    .modal {
-      display: none; position: fixed; z-index: 2000; top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(0,0,0,0.9); align-items: center; justify-content: center; padding: 20px;
-    }
-    .modal img { max-width: 100%; max-height: 80%; border-radius: 12px; box-shadow: 0 0 30px rgba(0,0,0,0.5); }
+    .modal { display: none; position: fixed; z-index: 2000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); align-items: center; justify-content: center; padding: 20px; }
+    .modal img { max-width: 100%; max-height: 80%; border-radius: 12px; }
 
-    /* Footer Flotante */
-    footer {
-      position: fixed; bottom: 20px; left: 15px; right: 15px;
-      background: var(--dark); color: white; border-radius: 20px;
-      padding: 15px 20px; z-index: 1000; box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-    }
+    footer { position: fixed; bottom: 20px; left: 15px; right: 15px; background: var(--dark); color: white; border-radius: 20px; padding: 15px 20px; z-index: 1000; box-shadow: 0 8px 30px rgba(0,0,0,0.3); }
     .footer-flex { max-width: 800px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
     .total-val { font-size: 1.4rem; font-weight: 900; color: var(--secondary); }
-    .btn-order {
-      background: var(--whatsapp); color: white; border: none; padding: 12px 20px;
-      border-radius: 12px; font-weight: 900; cursor: pointer; font-size: 0.9rem;
-      text-transform: uppercase;
-    }
+    .btn-order { background: var(--whatsapp); color: white; border: none; padding: 12px 20px; border-radius: 12px; font-weight: 900; cursor: pointer; font-size: 0.9rem; text-transform: uppercase; }
   </style>
 </head>
 <body>
 
 <header>
   <div class="header-content">
-    <div class="logo-area">
-      <img src="nancan_whatsapp.png" class="logo-img" onerror="this.style.display='none'">
-      <h1>NANCAN</h1>
-    </div>
+    <h1>NANCAN</h1>
     <div class="product-count" id="countBadge">0 Items</div>
   </div>
 </header>
 
 <div class="controls">
-  <input type="text" id="q" placeholder="Buscar producto o código..." oninput="updateList()">
+  <input type="text" id="q" placeholder="Buscar por nombre o código..." oninput="updateList()">
   <select id="f" onchange="updateList()">
     <option value="">Todos los Proveedores</option>
   </select>
@@ -486,7 +383,6 @@ function init() {
   calc();
 }
 
-// Buscador Optimizado con Debounce
 function updateList() {
   clearTimeout(debounceTimer);
   debounceTimer = setTimeout(() => {
@@ -514,7 +410,10 @@ function updateList() {
           <div class="p-name">${x.d}</div>
           <span class="p-meta">Cód: ${x.c}</span>
           <div class="tag-prov">${x.p}</div>
-          <div class="price">$${x.pm.toLocaleString()}</div>
+          <div class="price-area">
+            <div class="price-main">$${x.pm.toLocaleString()} <span class="price-label">Precio sin IVA</span></div>
+            <div class="price-sug">Sugerido: <strong>$${x.pv.toLocaleString()}</strong></div>
+          </div>
         </div>
         <div class="qty-control">
           <button class="qty-btn" onclick="change('${x.c}', 1)">+</button>
@@ -524,7 +423,6 @@ function updateList() {
       `;
       fragment.appendChild(card);
     });
-
     list.innerHTML = '';
     list.appendChild(fragment);
   }, 150);
@@ -540,7 +438,6 @@ function openModal(src) {
 function change(c, d) {
   cart[c] = (cart[c] || 0) + d;
   if (cart[c] <= 0) delete cart[c];
-  
   const el = document.getElementById(`n-${c}`);
   if (el) {
     el.textContent = cart[c] || 0;
@@ -548,7 +445,6 @@ function change(c, d) {
     if (cart[c] > 0) card.classList.add('in-cart');
     else card.classList.remove('in-cart');
   }
-
   localStorage.setItem("nancan_cart", JSON.stringify(cart));
   calc();
 }
@@ -566,13 +462,11 @@ function calc() {
 function send() {
   const keys = Object.keys(cart);
   if (keys.length === 0) return alert("Seleccioná productos primero.");
-
   let m = "🧾 *PEDIDO MAYORISTA - NANCAN*\n\n";
   let cash = 0;
   keys.forEach(c => {
     const x = dbIndex[c];
     const sub = x.pm * cart[c];
-    // Formato de WhatsApp: Artículo [Código] x Cantidad
     m += `• *${x.d}* [${c}]\n   Cant: ${cart[c]} | Sub: $${sub.toLocaleString()}\n\n`;
     cash += sub;
   });
