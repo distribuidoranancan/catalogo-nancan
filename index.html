@@ -7,90 +7,38 @@
   <link rel="icon" type="image/png" href="nancan_whatsapp.png">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
   <style>
+    /* Mantenemos tus estilos exactamente iguales ya que funcionan perfecto */
     :root {
-      --primary: #FF6B35;
-      --secondary: #FFD93D;
-      --dark: #1A1A2E;
-      --bg: #F0F2F5;
-      --white: #ffffff;
-      --whatsapp: #25D366;
-      --text-main: #2D3436;
-      --text-muted: #636E72;
-      --border: #DFE6E9;
-      --radius: 16px;
-      --shadow: 0 4px 12px rgba(0,0,0,0.08);
+      --primary: #FF6B35; --secondary: #FFD93D; --dark: #1A1A2E;
+      --bg: #F0F2F5; --white: #ffffff; --whatsapp: #25D366;
+      --text-main: #2D3436; --text-muted: #636E72; --border: #DFE6E9;
+      --radius: 16px; --shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
-
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    
-    body { 
-      font-family: 'Nunito', sans-serif; 
-      background: var(--bg); 
-      color: var(--text-main); 
-      padding-bottom: 160px;
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    header {
-      background: rgba(26, 26, 46, 0.95);
-      backdrop-filter: blur(10px);
-      color: white;
-      padding: 1rem 1.2rem;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    }
-    .header-content {
-      max-width: 800px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+    body { font-family: 'Nunito', sans-serif; background: var(--bg); color: var(--text-main); padding-bottom: 160px; -webkit-tap-highlight-color: transparent; }
+    header { background: rgba(26, 26, 46, 0.95); backdrop-filter: blur(10px); color: white; padding: 1rem 1.2rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
+    .header-content { max-width: 800px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
     h1 { font-size: 1.2rem; letter-spacing: 1px; font-weight: 900; }
     .product-count { background: var(--primary); padding: 4px 12px; border-radius: 20px; font-weight: 900; font-size: 0.8rem; }
-
     .controls { max-width: 800px; margin: 15px auto; padding: 0 15px; display: flex; flex-direction: column; gap: 10px; }
     input, select { padding: 14px 20px; border: none; border-radius: 25px; font-size: 16px; outline: none; background: var(--white); box-shadow: var(--shadow); width: 100%; }
-
     .products-container { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; padding: 0 15px; }
-
-    .prod-card {
-      background: var(--white);
-      border-radius: var(--radius);
-      padding: 12px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      box-shadow: var(--shadow);
-      transition: all 0.2s ease;
-      border: 2px solid transparent;
-    }
+    .prod-card { background: var(--white); border-radius: var(--radius); padding: 12px; display: flex; align-items: center; gap: 12px; box-shadow: var(--shadow); transition: all 0.2s ease; border: 2px solid transparent; }
     .prod-card.in-cart { border-color: var(--primary); background: #fffaf8; }
-
     .prod-img { width: 85px; height: 85px; border-radius: 12px; object-fit: cover; background: #f8f9fa; cursor: zoom-in; flex-shrink: 0; }
-
     .prod-info { flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: center; }
-    .p-name { 
-      font-weight: 800; font-size: 0.95rem; line-height: 1.2; margin-bottom: 4px;
-      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
-    }
+    .p-name { font-weight: 800; font-size: 0.95rem; line-height: 1.2; margin-bottom: 4px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
     .p-meta { font-size: 0.75rem; color: var(--text-muted); font-weight: 700; }
     .tag-prov { font-size: 0.65rem; background: #eef2ff; color: #4338ca; padding: 2px 6px; border-radius: 4px; font-weight: 800; width: fit-content; margin-top: 2px; }
-
     .price-area { margin-top: 6px; }
     .price-main { color: var(--primary); font-weight: 900; font-size: 1.1rem; }
     .price-label { font-size: 0.6rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase; }
     .price-sug { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
-
     .qty-control { display: flex; flex-direction: column; align-items: center; background: #F1F3F5; border-radius: 12px; padding: 6px; gap: 4px; flex-shrink: 0; width: 44px; }
     .qty-btn { width: 32px; height: 32px; border-radius: 8px; border: none; background: var(--white); font-weight: 900; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.1); font-size: 1.2rem; display: flex; align-items: center; justify-content: center; }
     .qty-num { font-weight: 900; font-size: 1rem; color: var(--dark); margin: 2px 0; }
-
     .modal { display: none; position: fixed; z-index: 2000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); align-items: center; justify-content: center; padding: 20px; }
     .modal img { max-width: 100%; max-height: 80%; border-radius: 12px; }
-
     footer { position: fixed; bottom: 20px; left: 15px; right: 15px; background: var(--dark); color: white; border-radius: 20px; padding: 15px 20px; z-index: 1000; box-shadow: 0 8px 30px rgba(0,0,0,0.3); }
     .footer-flex { max-width: 800px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
     .total-val { font-size: 1.4rem; font-weight: 900; color: var(--secondary); }
@@ -113,7 +61,9 @@
   </select>
 </div>
 
-<div id="list" class="products-container"></div>
+<div id="list" class="products-container">
+  <p style="text-align: center; padding: 20px;">Cargando catálogo...</p>
+</div>
 
 <div id="imgModal" class="modal" onclick="this.style.display='none'">
   <img id="modalImg">
@@ -130,122 +80,35 @@
 </footer>
 
 <script>
-// --- BASE DE DATOS ---
-const db = [
-  {"c":"EO100","d":"PELUCHES POP-UP HEROES","p":"ARBREX","pv":29900,"pm":12852},
-  {"c":"7108","d":"CARS MACK GRANDE A FRICCION","p":"ARBREX","pv":96850,"pm":41970},
-  {"c":"2985","d":"MOTOR SPEED MOTO DIE CAST","p":"DITOYS","pv":5800,"pm":2900},
-  {"c":"2688","d":"SPIDERMAN TRUCKS PULL BACK","p":"DITOYS","pv":6800,"pm":3500},
-  {"c":"5005","d":"SMOOSHI POTE X 2 GALERA FELIZ","p":"ERREKAESE","pv":13000,"pm":5650},
-  {"c":"15003","d":"BBUDDIEEZ MI PRIMER KIT INICIO","p":"FIBRO","pv":9200,"pm":4200},
-  {"c":"15007","d":"BBUDDIEEZ KIT BOLA TRANSPORTE","p":"FIBRO","pv":15800,"pm":7200},
-  {"c":"15004","d":"BBUDDIEEZ MI PRIMER KIT PROFESIONAL","p":"FIBRO","pv":11200,"pm":5100},
-  {"c":"8290","d":"LANZADOR WATER PUMP 37 CM","p":"FUN TOYS","pv":7200,"pm":2800},
-  {"c":"4192","d":"SUPERMAN SET DE BUCEO GRANDE","p":"FUN TOYS","pv":18500,"pm":8000},
-  {"c":"4191","d":"BATMAN SET DE BUCEO GRANDE","p":"FUN TOYS","pv":18500,"pm":8000},
-  {"c":"8291","d":"LANZADOR DE AGUA WATER PUMP 60 CM","p":"FUN TOYS","pv":7800,"pm":3200},
-  {"c":"566562","d":"PUZZLE PLAYMOBIL SURTIDO","p":"IMPORTAL GROUP","pv":5999,"pm":2200},
-  {"c":"IKCAP001","d":"CAPIBARA C/MOCHILA","p":"ISAKITO","pv":34100,"pm":15000},
-  {"c":"IM8540","d":"TRIOMINO IMPORTADO CON 4 ATRILES","p":"JUEBIL","pv":32600,"pm":13990},
-  {"c":"BI8750","d":"RUMMY BURAKO FICHA MARFIL","p":"JUEBIL","pv":79500,"pm":38000},
-  {"c":"6760","d":"MAGNETIC MAGFORMERS 38 PIEZAS","p":"JUGUETECH","pv":66000,"pm":29990},
-  {"c":"6268","d":"LETRAS Y NUMEROS DE MADERA ENCASTRE","p":"JUGUETECH","pv":12300,"pm":5250},
-  {"c":"43799","d":"1:36 MERCEDES BENZ W125","p":"LIONEL´S","pv":17990,"pm":8990},
-  {"c":"106","d":"JGO.DE MATE CON TERMO EN BOLSA","p":"LIONEL´S","pv":5400,"pm":2300},
-  {"c":"49766","d":"1:36 MINI COOPER","p":"LIONEL´S","pv":17990,"pm":8990},
-  {"c":"43733","d":"1:36 CHEVROLET CORVETTE 1963","p":"LIONEL´S","pv":17990,"pm":8990},
-  {"c":"43816","d":"1:36 PORSCHE 550 SPYDER","p":"LIONEL´S","pv":17990,"pm":8990},
-  {"c":"52020B","d":"1:60 WELLY BLISTER","p":"LIONEL´S","pv":7300,"pm":3600},
-  {"c":"1732-32030","d":"POWER ROCKERS FIG.C/ESCENARIO","p":"NEXT POINT","pv":24000,"pm":11500},
-  {"c":"NA201980","d":"YO YO DE METAL","p":"NOBU","pv":6000,"pm":2300},
-  {"c":"SISJUL084","d":"JULIANA MAGIC LOOMS I LOVE UNICORNIOS","p":"SISFRIENDS","pv":10500,"pm":5150},
-  {"c":"M010","d":"VALIJA JULIANA MAMA","p":"SISFRIENDS","pv":20990,"pm":11200},
-  {"c":"SISJUL060","d":"VALIJA JULIANA PELUQUERIA","p":"SISFRIENDS","pv":44999,"pm":22800},
-  {"c":"JYJJUL018","d":"VALIJA JULIANA DECORA TU PELO CH.","p":"SISFRIENDS","pv":27990,"pm":14800},
-  {"c":"SISJUL046","d":"VALIJA JULIANA MAKE UP UNICORNIO GDE","p":"SISFRIENDS","pv":39990,"pm":19900},
-  {"c":"D013","d":"VALIJA JULIANA DOCTORA GRANDE","p":"SISFRIENDS","pv":44990,"pm":22900},
-  {"c":"TAP00605","d":"SUPER AUTOS POLICIA SAME","p":"TAPIMOVIL","pv":5250,"pm":2400},
-  {"c":"AMA02900","d":"AGUA WOW MASHA Y EL OSO","p":"TAPIMOVIL","pv":10500,"pm":5150},
-  {"c":"DFZ07885","d":"MALETIN P/CREAR Y COLOREAR FROZEN","p":"TAPIMOVIL","pv":10500,"pm":5150},
-  {"c":"TAP00520","d":"SCRATCH WOW SURTIDOS","p":"TAPIMOVIL","pv":10500,"pm":5150},
-  {"c":"DMD00169","d":"MALETIN P/CREAR Y COLOREAR STITCH","p":"TAPIMOVIL","pv":10500,"pm":5150},
-  {"c":"DFZ07837","d":"AGUA WOW FROZEN","p":"TAPIMOVIL","pv":10500,"pm":5150},
-  {"c":"TAP00538","d":"AVENTURAS EN EL AGUA SURTIDOS","p":"TAPIMOVIL","pv":13990,"pm":6550},
-  {"c":"TAP00543","d":"ACUARELAS WOW SURTIDO DISNEY","p":"TAPIMOVIL","pv":8500,"pm":4100},
-  {"c":"DSU07609","d":"HUEVO SORPRESA C/SELLO Y STICKER","p":"TAPIMOVIL","pv":3659,"pm":1750},
-  {"c":"TDI04231","d":"42 NUMEROS Y SIGNOS MEDIANOS","p":"TAPIMOVIL","pv":6230,"pm":2900},
-  {"c":"UGD01015","d":"2 PUZZLES 24 Y 36 P GABBY-S DOLLHOUSE","p":"TAPIMOVIL","pv":11400,"pm":5450},
-  {"c":"KTY09830","d":"SCRATCH WOW HELLO KITTY","p":"TAPIMOVIL","pv":10500,"pm":5150},
-  {"c":"F3233","d":"MOCHILA 18\" GAME ZONE","p":"TIVORY TRADING","pv":79000,"pm":39500},
-  {"c":"F2103","d":"MOCHILA 18\" UNICORNIO","p":"TIVORY TRADING","pv":79000,"pm":39500},
-  {"c":"FOOTY","d":"PELOTA FOOTY N°5","p":"TIVORY TRADING","pv":18000,"pm":8500},
-  {"c":"F6033","d":"MOCHILA ESPALDA 18\" MARGARITA NEGRA","p":"TIVORY TRADING","pv":99800,"pm":48500},
-  {"c":"1012","d":"LOTERMATIC","p":"TRISMA S.A","pv":34000,"pm":15900},
-  {"c":"331614","d":"PHLAT BALL PELOTA","p":"CAFFARO","pv":35960,"pm":17980},
-  {"c":"36202","d":"GABBY DOLLHOUSE MUÑECA","p":"CAFFARO","pv":63000,"pm":31500},
-  {"c":"HGR18","d":"BARBIE DREAMTOPIA","p":"LADAI","pv":57900,"pm":27900},
-  {"c":"DWJ33","d":"BARBIE CHELSEA","p":"LADAI","pv":20500,"pm":9500},
-  {"c":"1806","d":"HOT WHEELS X 5","p":"SUR LATINA","pv":32000,"pm":14900},
-  {"c":"JDF56","d":"JUEGO UNO EXPRESS","p":"SUR LATINA","pv":13700,"pm":6500},
-  {"c":"HRR13","d":"BARBIE UNICORNIO","p":"SUR LATINA","pv":54500,"pm":25900},
-  {"c":"JCX93","d":"CHELSEA POP REVEAL","p":"SUR LATINA","pv":41900,"pm":19900},
-  {"c":"T7580","d":"BARBIE FAB GLITZ","p":"SUR LATINA","pv":28500,"pm":14500},
-  {"c":"C1817","d":"MATCHBOX PACK X 5","p":"SUR LATINA","pv":32000,"pm":14900},
-  {"c":"K5904","d":"HW PACK X 3","p":"SUR LATINA","pv":18500,"pm":8900},
-  {"c":"30782","d":"MATCHBOX BASICOS","p":"SUR LATINA","pv":6500,"pm":3490},
-  {"c":"T7439","d":"BARBIE VESTIDO AZUL","p":"SUR LATINA","pv":19990,"pm":9900},
-  {"c":"C4982","d":"HW AUTO BASICO","p":"SUR LATINA","pv":6500,"pm":3490},
-  {"c":"7600","d":"X-SHOT INSANITY","p":" SUDAMERICANA","pv":23600,"pm":11750},
-  {"c":"7701","d":"BABYCORNS GRANDES","p":" SUDAMERICANA","pv":119900,"pm":59500},
-  {"c":"4803","d":"BUG ATTACK BICHOS","p":" SUDAMERICANA","pv":10800,"pm":4690},
-  {"c":"7700","d":"BABYCORNS PEQUEÑOS","p":" SUDAMERICANA","pv":62800,"pm":33500},
-  {"c":"15079","d":"AUTITOS MAISTO","p":" SUDAMERICANA","pv":6800,"pm":2600},
-  {"c":"635419","d":"LANZA AGUA WATER PUMP","p":" SUDAMERICANA","pv":4500,"pm":1500},
-  {"c":"71234","d":"CAMION DE RECICLAJE","p":"INTEK","pv":149990,"pm":72990},
-  {"c":"70693","d":"PLAYMOBIL VELOCIRAPTOR","p":"INTEK","pv":25990,"pm":14200},
-  {"c":"71233","d":"CAMION DE BOMBEROS","p":"INTEK","pv":169990,"pm":89990},
-  {"c":"43102","d":"GOO JIT ZU MINECRAFT","p":"INTEK","pv":57990,"pm":29900},
-  {"c":"70820","d":"PLAYMOBIL STUNTSHOW QUAD","p":"INTEK","pv":89990,"pm":38500},
-  {"c":"42996","d":"GOO JIT ZU SPIDERMAN","p":"INTEK","pv":57990,"pm":29990},
-  {"c":"SBCB1","d":"PELOTA COUNTER BALL","p":"INTEK","pv":49990,"pm":26990},
-  {"c":"70732","d":"FIGURA SORPRESA S21","p":"INTEK","pv":11490,"pm":6350},
-  {"c":"HWCC4","d":"CAR CASE MULTILANZADOR","p":"INTEK","pv":79990,"pm":34990},
-  {"c":"HWCC22G","d":"CAR CASE HW VINTAGE","p":"INTEK","pv":27990,"pm":14200},
-  {"c":"HWCC18","d":"HOT WHEELS RUEDA METALICA","p":"INTEK","pv":49990,"pm":25100},
-  {"c":"HWCC19","d":"HOT WHEELS CAR CASE","p":"INTEK","pv":44990,"pm":21500},
-  {"c":"BBCR6","d":"CAJA REGISTRADORA BARBIE","p":"INTEK","pv":79990,"pm":34990},
-  {"c":"99663","d":"CRY BABIES CHANGERS","p":"WABRO","pv":36000,"pm":6000},
-  {"c":"99547","d":"CRY BABIES 13 CM","p":"WABRO","pv":15000,"pm":5500},
-  {"c":"59076","d":"WOW PODS H. POTTER RON","p":"WABRO","pv":15000,"pm":6500},
-  {"c":"98831","d":"TWISTER","p":"WABRO","pv":99000,"pm":51990},
-  {"c":"588498","d":"LOL OMG DOLL","p":"WABRO","pv":139990,"pm":59000},
-  {"c":"F9220","d":"NERF PISTOLA GEL","p":"WABRO","pv":190000,"pm":89900},
-  {"c":"61087","d":"PISTOLA DART ZONE","p":"WABRO","pv":23000,"pm":10500},
-  {"c":"27091","d":"PELUCHE TY 23 CM","p":"WABRO","pv":52500,"pm":25500},
-  {"c":"F8995","d":"MONOPOLY KNOCK OUT","p":"WABRO","pv":49990,"pm":23500},
-  {"c":"99682","d":"CRY BABIES MAGIC TEARS","p":"WABRO","pv":37800,"pm":15990},
-  {"c":"99755","d":"CRY BABIES DAY CARE","p":"WABRO","pv":99990,"pm":52900},
-  {"c":"99681","d":"CRY BABIES LOVING CARE","p":"WABRO","pv":79990,"pm":35990},
-  {"c":"99689","d":"CRY BABIES BFF","p":"WABRO","pv":71990,"pm":25900},
-  {"c":"74108","d":"ALLIEN BOGGIE LUZ","p":"WABRO","pv":7600,"pm":3500},
-  {"c":"6761","d":"MAGNETIC MAGFORMERS 20 PIEZAS","p":"JUGUETECH","pv":45000,"pm":21500},
-  {"c":"6269","d":"BLOQUES DE MADERA 50 PIEZAS","p":"JUGUETECH","pv":18500,"pm":8500},
-];
-
-const dbIndex = Object.fromEntries(db.map(x => [x.c, x]));
+let db = []; // Ahora la base empieza vacía
+let dbIndex = {};
 let cart = JSON.parse(localStorage.getItem("nancan_cart")) || {};
 let debounceTimer;
 
-function init() {
-  const provs = [...new Set(db.map(x => x.p))].sort();
-  const select = document.getElementById('f');
-  provs.forEach(p => {
-    const o = document.createElement('option');
-    o.value = p; o.textContent = p;
-    select.appendChild(o);
-  });
-  updateList();
-  calc();
+async function init() {
+    try {
+        // Buscamos el archivo JSON en la misma carpeta
+        const response = await fetch('productos.json');
+        if (!response.ok) throw new Error("No se encontró el archivo productos.json");
+        
+        db = await response.json();
+        dbIndex = Object.fromEntries(db.map(x => [x.c, x]));
+
+        // Poblamos el selector de proveedores
+        const provs = [...new Set(db.map(x => x.p))].sort();
+        const select = document.getElementById('f');
+        provs.forEach(p => {
+            const o = document.createElement('option');
+            o.value = p; o.textContent = p;
+            select.appendChild(o);
+        });
+
+        updateList();
+        calc();
+    } catch (error) {
+        console.error("Error cargando base de datos:", error);
+        document.getElementById('list').innerHTML = `<p style="text-align:center; color:red;">Error al cargar productos. Asegurate de que productos.json exista en GitHub.</p>`;
+    }
 }
 
 function updateList() {
@@ -288,7 +151,7 @@ function updateList() {
       `;
       fragment.appendChild(card);
     });
-    list.innerHTML = '';
+    list.innerHTML = filtered.length ? '' : '<p style="text-align:center;">No se encontraron productos.</p>';
     list.appendChild(fragment);
   }, 150);
 }
@@ -332,7 +195,7 @@ function send() {
   keys.forEach(c => {
     const x = dbIndex[c];
     const sub = x.pm * cart[c];
-    m += `• *${x.d}* [${c}]\n   Cant: ${cart[c]} | Sub: $${sub.toLocaleString()}\n\n`;
+    m += `• *${x.d}* [${c}]\n    Cant: ${cart[c]} | Sub: $${sub.toLocaleString()}\n\n`;
     cash += sub;
   });
   m += `━━━━━━━━━━━━━━\n*TOTAL PEDIDO: $${cash.toLocaleString()}*`;
