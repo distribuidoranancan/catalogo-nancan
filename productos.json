@@ -1,155 +1,1073 @@
 [
-  {"c": "99755", "d": "CRY BABIES DAY CARE", "p": "WABRO", "pv": "99990.00", "pv": "52900.00"},
-  {"c": "EO100", "d": "PELUCHES POP-UP HEROES", "p": "ARBREX", "pv": "29900.00", "pv": "12852.40"},
-  {"c": "7108", "d": "CARS MACK GRANDE A FRICCION", "p": "ARBREX", "pv": "96850.00", "pv": "41970.00"},
-  {"c": "72190", "d": "HW VEHICULO 13 CM PULL BACK", "p": "CAFFARO", "pv": "13960.00", "pv": "5500.00"},
-  {"c": "PNY38000", "d": "PINYPON EMOCIONES", "p": "CAFFARO", "pv": "16980.00", "pv": "8490.00"},
-  {"c": "PNY60000", "d": "PINYPON TERRIFIC SERIE 14", "p": "CAFFARO", "pv": "16980.00", "pv": "8490.00"},
-  {"c": "15570", "d": "PINYPON NEW LOOKS ESTILOS DE PELO", "p": "CAFFARO", "pv": "23800.00", "pv": "11900.00"},
-  {"c": "1753", "d": "GABBY-S DOLLHOUSE BIJOURRIFIC DELUXE", "p": "CAFFARO", "pv": "30000.00", "pv": "15000.00"},
-  {"c": "331614", "d": "PHLAT BALL PELOTA PLEGABLE AZUL", "p": "CAFFARO", "pv": "35960.00", "pv": "17980.00"},
-  {"c": "36202", "d": "GABBY´S DOLLHOUSE MUÑECA 23 CM", "p": "CAFFARO", "pv": "63000.00", "pv": "31500.00"},
-  {"c": "30782", "d": "AUTOS MATCHBOX BASICOS SURTIDOS", "p": "COMPAÑIA SUR LATINA", "pv": "6500.00", "pv": "3490.00"},
-  {"c": "C4982", "d": "HW AUTO", "p": "COMPAÑIA SUR LATINA", "pv": "6500.00", "pv": "3490.00"},
-  {"c": "JDF56", "d": "JUEGO DE MESA UNO EXPRESS", "p": "COMPAÑIA SUR LATINA", "pv": "13700.00", "pv": "6500.00"},
-  {"c": "K5904", "d": "HW PACK X 3 AUTOS SURTIDOS", "p": "COMPAÑIA SUR LATINA", "pv": "18500.00", "pv": "8900.00"},
-  {"c": "T7439", "d": "BARBIE CLASICA VESTIDO AZUL", "p": "COMPAÑIA SUR LATINA", "pv": "19990.00", "pv": "9900.00"},
-  {"c": "T7580", "d": "BARBIE FAB GLITZ", "p": "COMPAÑIA SUR LATINA", "pv": "28500.00", "pv": "14500.00"},
-  {"c": "1806", "d": "HOT WHEELS X 5", "p": "COMPAÑIA SUR LATINA", "pv": "32000.00", "pv": "14900.00"},
-  {"c": "C1817", "d": "MATCHBOX PACK AUTOS X 5 UNIDADES", "p": "COMPAÑIA SUR LATINA", "pv": "32000.00", "pv": "14900.00"},
-  {"c": "JCX93", "d": "MUÑECA CHELSEA POP REVEAL SERIE TEA", "p": "COMPAÑIA SUR LATINA", "pv": "41900.00", "pv": "19900.00"},
-  {"c": "HRR13", "d": "MUÑECA BARBIE UNICORNIO ROSA", "p": "COMPAÑIA SUR LATINA", "pv": "54500.00", "pv": "25900.00"},
-  {"c": "FBR37", "d": "BARBIE FASHIONISTAS", "p": "COMPAÑIA SUR LATINA", "pv": "61000.00", "pv": "29900.00"},
-  {"c": "2985", "d": "MOTOR SPEED MOTO DIE CAST", "p": "DITOYS", "pv": "5800.00", "pv": "2900.00"},
-  {"c": "2688", "d": "SPIDERMAN TRUCKS PULL BACK", "p": "DITOYS", "pv": "6800.00", "pv": "3500.00"},
-  {"c": "5005", "d": "SMOOSHI POTE X 2 GALERA FELIZ", "p": "ERREKAESE", "pv": "13000.00", "pv": "5650.00"},
-  {"c": "15003", "d": "BBUDDIEEZ MI PRIMER KIT INICIO", "p": "FIBRO", "pv": "9200.00", "pv": "4200.00"},
-  {"c": "15007", "d": "BBUDDIEEZ KIT BOLA TRANSPORTE", "p": "FIBRO", "pv": "15800.00", "pv": "7200.00"},
-  {"c": "15004", "d": "BBUDDIEEZ MI PRIMER KIT PROFESIONAL", "p": "FIBRO ", "pv": "11200.00", "pv": "5100.00"},
-  {"c": "8290", "d": "LANZADOR WATER PUMP 37 CM", "p": "FUN TOYS ", "pv": "7200.00", "pv": "2800.00"},
-  {"c": "8291", "d": "LANZADOR DE AGUA WATER PUMP 60 CM", "p": "FUN TOYS ", "pv": "7800.00", "pv": "3200.00"},
-  {"c": "4191", "d": "BATMAN SET DE BUCEO GRANDE", "p": "FUN TOYS ", "pv": "18500.00", "pv": "8000.00"},
-  {"c": "4192", "d": "SUPERMAN SET DE BUCEO GRANDE", "p": "FUN TOYS ", "pv": "18500.00", "pv": "8000.00"},
-  {"c": "635419", "d": "LANZA AGUA CHICO WATER PUMP", "p": "IMPORTADORA SUDAMERICANA", "pv": "4500.00", "pv": "1500.00"},
-  {"c": "635420", "d": "LANZA AGUA GRANDE WATER PUMP", "p": "IMPORTADORA SUDAMERICANA", "pv": "5300.00", "pv": "1700.00"},
-  {"c": "15079", "d": "AUTITOS MAISTO", "p": "IMPORTADORA SUDAMERICANA", "pv": "6800.00", "pv": "2600.00"},
-  {"c": "635421", "d": "PISTOLA LANZA AGUA WATER PUMP", "p": "IMPORTADORA SUDAMERICANA", "pv": "8000.00", "pv": "2800.00"},
-  {"c": "4803-4374", "d": "BUG ATTACK 2 BICHOS", "p": "IMPORTADORA SUDAMERICANA", "pv": "10800.00", "pv": "4690.00"},
-  {"c": "7600-36795", "d": "X-SHOT INSANITY MICRO", "p": "IMPORTADORA SUDAMERICANA", "pv": "23600.00", "pv": "11750.00"},
-  {"c": "7700", "d": "BABYCORNS PEQUEÑO ", "p": "IMPORTADORA SUDAMERICANA", "pv": "62800.00", "pv": "33500.00"},
-  {"c": "7701", "d": "BABYCORNS GRANDE ", "p": "IMPORTADORA SUDAMERICANA", "pv": "119900.00", "pv": "59500.00"},
-  {"c": "566554", "d": "PUZZLE PLAYMOBIL SURTIDOS", "p": "IMPORTAL GROUP ", "pv": "5999.00", "pv": "2200.00"},
-  {"c": "70732", "d": "FIGURA SORPRESA SERIE 21 AZUL", "p": "INTEK ", "pv": "11490.00", "pv": "6350.00"},
-  {"c": "70733", "d": "FIGURA SORPRESA SERIE 21 VIOLETA", "p": "INTEK ", "pv": "11490.00", "pv": "6350.00"},
-  {"c": "HWCC16", "d": "HOT WHEELS GUARDA AUTOS PLASTICO", "p": "INTEK ", "pv": "19990.00", "pv": "10300.00"},
-  {"c": "70693", "d": "DUO PACK VELOCIRAPTOR Y SAQUEADOR", "p": "INTEK ", "pv": "25990.00", "pv": "14200.00"},
-  {"c": "HWCC2", "d": "CAR CASE HOT WHEELS PLATEADO", "p": "INTEK ", "pv": "27990.00", "pv": "14200.00"},
-  {"c": "HWCC22", "d": "CAR CASE HOT WHEELS VINTAGE BLACK", "p": "INTEK ", "pv": "27990.00", "pv": "14200.00"},
-  {"c": "HWCC19", "d": "HOT WHEELS CAR CASE C/AUTO ARMABLE", "p": "INTEK ", "pv": "44990.00", "pv": "21500.00"},
-  {"c": "70676", "d": "SET DE REGALO ENTRENADORA DE PERROS", "p": "INTEK ", "pv": "44990.00", "pv": "21995.00"},
-  {"c": "HWCC18", "d": "HOT WHELLS GUARDA AUTOS RUEDA METALICA", "p": "INTEK ", "pv": "49990.00", "pv": "25100.00"},
-  {"c": "SBCB1", "d": "PELOTA COUNTER BALL", "p": "INTEK ", "pv": "49990.00", "pv": "26990.00"},
-  {"c": "43102", "d": "GOO JIT ZU MINECRAFT ", "p": "INTEK ", "pv": "57990.00", "pv": "29900.00"},
-  {"c": "42996", "d": "GOO JIT ZU MARVEL SPIDERMAN", "p": "INTEK ", "pv": "57990.00", "pv": "29990.00"},
-  {"c": "BBCR6", "d": "CAJA REGISTRADORA BARBIE C/SCANER", "p": "INTEK ", "pv": "79990.00", "pv": "34990.00"},
-  {"c": "HWCC4", "d": "CAR CASE MULTILANZADOR HW", "p": "INTEK ", "pv": "79990.00", "pv": "34990.00"},
-  {"c": "70820", "d": "STARTER PACK STUNTSHOW QUAD CON RAMPA", "p": "INTEK ", "pv": "89990.00", "pv": "38500.00"},
-  {"c": "71234", "d": "CAMION DE RECICLAJE", "p": "INTEK ", "pv": "149990.00", "pv": "72990.00"},
-  {"c": "71233", "d": "CAMION DE BOMBEROS", "p": "INTEK ", "pv": "169990.00", "pv": "89990.00"},
-  {"c": "IKCAP001", "d": "CAPIBARA C/MOCHILA", "p": "ISAKITO", "pv": "34100.00", "pv": "15000.00"},
-  {"c": "IM8540", "d": "TRIOMINO IMPORTADO CON 4 ATRILES", "p": "JUEBIL ", "pv": "32600.00", "pv": "13990.00"},
-  {"c": "BI8750", "d": "RUMMY BURAKO FICHA MARFIL", "p": "JUEBIL ", "pv": "79500.00", "pv": "38000.00"},
-  {"c": "6268 (YQ00350)", "d": "LETRAS Y NUMEROS DE MADERA ENCASTRE", "p": "JUGUETECH ", "pv": "12300.00", "pv": "5250.00"},
-  {"c": "6760 (006A)", "d": "MAGNETIC MAGFORMERS 38 PIEZAS", "p": "JUGUETECH ", "pv": "66000.00", "pv": "29990.00"},
-  {"c": "DWJ33", "d": "BARBIE CHELSEA SURTIDAS", "p": "LADAI E HIJOS", "pv": "20500.00", "pv": "9500.00"},
-  {"c": "HGR18", "d": "BARBIE DREAMTOPIA UNICORNIO PELO AZUL", "p": "LADAI E HIJOS", "pv": "57900.00", "pv": "27900.00"},
-  {"c": "106", "d": "JGO.DE MATE CON TERMO EN BOLSA", "p": "LIONEL´S ", "pv": "5400.00", "pv": "2300.00"},
-  {"c": "52020B", "d": "1:60 WELLY BLISTER", "p": "LIONEL´S ", "pv": "7300.00", "pv": "3600.00"},
-  {"c": "43733", "d": "1:36 CHEVROLET CORVETTE 1963", "p": "LIONEL´S ", "pv": "17990.00", "pv": "8990.00"},
-  {"c": "43799", "d": "1:36 MERCEDES BENZ W125", "p": "LIONEL´S ", "pv": "17990.00", "pv": "8990.00"},
-  {"c": "43816", "d": "1:36 PORSCHE 550 SPYDER", "p": "LIONEL´S ", "pv": "17990.00", "pv": "8990.00"},
-  {"c": "49766", "d": "1:36 MINI COOPER", "p": "LIONEL´S ", "pv": "17990.00", "pv": "8990.00"},
-  {"c": "1732-32030", "d": "POWER ROCKERS FIG.C/ESCENARIO", "p": "NEXT POINT", "pv": "24000.00", "pv": "11500.00"},
-  {"c": "NA201980", "d": "YO YO DE METAL", "p": "NOBU", "pv": "6000.00", "pv": "2300.00"},
-  {"c": "8453", "d": "MINI PISTOLA DE AGUA BASE X SPLASH", "p": "SEBIGUS", "pv": "3200.00", "pv": "1290.00"},
-  {"c": "54424", "d": "AUTO METALICO GO SPEED 1:64", "p": "SEBIGUS", "pv": "4500.00", "pv": "1890.00"},
-  {"c": "52255", "d": "MOTO A FRICCION", "p": "SEBIGUS", "pv": "6000.00", "pv": "2450.00"},
-  {"c": "52889", "d": "FROZEN SET DE BIJOUTERIE", "p": "SEBIGUS", "pv": "7000.00", "pv": "2790.00"},
-  {"c": "53863", "d": "MAMADERA MAGICA P/BEBOTE X2", "p": "SEBIGUS", "pv": "6600.00", "pv": "2850.00"},
-  {"c": "54452", "d": "MUÑECA TINY FANTASY", "p": "SEBIGUS", "pv": "7400.00", "pv": "2990.00"},
-  {"c": "50594", "d": "VARITA PRINCESA C/LUZ Y SONIDO", "p": "SEBIGUS", "pv": "8000.00", "pv": "3365.00"},
-  {"c": "8480", "d": "LANZADOR DE AGUA SPIDERMAN", "p": "SEBIGUS", "pv": "8500.00", "pv": "3400.00"},
-  {"c": "8867", "d": "LANZADOR DE AGUA SPIDERMAN", "p": "SEBIGUS", "pv": "8500.00", "pv": "3500.00"},
-  {"c": "51066", "d": "PIZARRA MAGICA MINI", "p": "SEBIGUS", "pv": "10500.00", "pv": "4400.00"},
-  {"c": "8842", "d": "SET DE BUCEO PATAS Y ANTIPARRAS", "p": "SEBIGUS", "pv": "10800.00", "pv": "4500.00"},
-  {"c": "8843", "d": "SET DE BUCEO NENA BASE X-PLASH", "p": "SEBIGUS", "pv": "10500.00", "pv": "4550.00"},
-  {"c": "4944", "d": "PARAGUAS CON SILBATO 6 MODELOS", "p": "SEBIGUS", "pv": "22000.00", "pv": "5000.00"},
-  {"c": "4945", "d": "PARAGUAS CON SILBATO 5 MODELOS", "p": "SEBIGUS", "pv": "22000.00", "pv": "5000.00"},
-  {"c": "4971", "d": "PARAGUAS BATMAN 4 MODELOS", "p": "SEBIGUS", "pv": "22000.00", "pv": "5000.00"},
-  {"c": "4973", "d": "PARAGUAS SUPERMAN CON SILBATO", "p": "SEBIGUS", "pv": "22000.00", "pv": "5000.00"},
-  {"c": "4976", "d": "PARAGUAS LIGA DE LA JUSTICIA CON SILBATO", "p": "SEBIGUS", "pv": "22000.00", "pv": "5000.00"},
-  {"c": "55816", "d": "JUEGO DE MADERA DIDACTICO P/VESTIR", "p": "SEBIGUS", "pv": "13500.00", "pv": "5750.00"},
-  {"c": "8533", "d": "PISTOLA DE AGUA MEDIANA IRON MAN", "p": "SEBIGUS", "pv": "15000.00", "pv": "6230.00"},
-  {"c": "53479", "d": "MUÑECA TINY FASHION", "p": "SEBIGUS", "pv": "17800.00", "pv": "7680.00"},
-  {"c": "55405", "d": "AVENGERS SET DE AUTOS METALICOS", "p": "SEBIGUS", "pv": "17500.00", "pv": "7690.00"},
-  {"c": "55439", "d": "X-DINO C/LUZ Y SONIDO", "p": "SEBIGUS", "pv": "48000.00", "pv": "21080.00"},
-  {"c": "14067", "d": "TEAMSTERZ AUTOS DE METAL 7 CM", "p": "WABRO", "pv": "5400.00", "pv": "2000.00"},
-  {"c": "74122", "d": "SQUISHY", "p": "WABRO", "pv": "5500.00", "pv": "2600.00"},
-  {"c": "74132", "d": "ALLIEN WALL CREEPER", "p": "WABRO", "pv": "6200.00", "pv": "2700.00"},
-  {"c": "63119", "d": "ASTRO VENTURE FIGURA 8 CM ARTICULADA", "p": "WABRO", "pv": "6500.00", "pv": "2990.00"},
-  {"c": "74108", "d": "ALLIEN BOGGIE C/LUZ", "p": "WABRO", "pv": "7600.00", "pv": "3500.00"},
-  {"c": "74133", "d": "SERPIENTE STRETCHY", "p": "WABRO", "pv": "11700.00", "pv": "4990.00"},
-  {"c": "99547", "d": "CRY BABIES MUÑECA 13 CM ", "p": "WABRO", "pv": "15000.00", "pv": "5500.00"},
-  {"c": "99663", "d": "CRY BABIES LITTLE CHANGERS", "p": "WABRO", "pv": "36000.00", "pv": "6000.00"},
-  {"c": "59057", "d": "WOW PODS MARVEL BLACK PANTHER 162", "p": "WABRO", "pv": "15000.00", "pv": "6500.00"},
-  {"c": "59058", "d": "WOW PODS MARVEL SHURI 163", "p": "WABRO", "pv": "15000.00", "pv": "6500.00"},
-  {"c": "59067", "d": "WOW PODS MARVEL WINTER SOLDIER 157", "p": "WABRO", "pv": "15000.00", "pv": "6500.00"},
-  {"c": "59073", "d": "WOW PODS HARRY POTTER SNAPE 151", "p": "WABRO", "pv": "15000.00", "pv": "6500.00"},
-  {"c": "59076", "d": "WOW PODS HARRY POTTER DRACO 152", "p": "WABRO", "pv": "15000.00", "pv": "6500.00"},
-  {"c": "59077", "d": "WOW PODS HARRY POTTER RON 150", "p": "WABRO", "pv": "15000.00", "pv": "6500.00"},
-  {"c": "59078", "d": "WOW PODS HARRY POTTER SIRIUS 151", "p": "WABRO", "pv": "15000.00", "pv": "6500.00"},
-  {"c": "59152", "d": "WOW PODS HARRY POTTER VOLDEMORT 216", "p": "WABRO", "pv": "15000.00", "pv": "6500.00"},
-  {"c": "59153", "d": "WOW PODS HARRY POTTER HAGRID 215", "p": "WABRO", "pv": "15000.00", "pv": "6500.00"},
-  {"c": "74142", "d": "PLAYSET SUPER SAND ARENA KINETICA", "p": "WABRO", "pv": "15000.00", "pv": "6800.00"},
-  {"c": "F0040", "d": "NERF DARDOS ELITE X 20", "p": "WABRO", "pv": "28800.00", "pv": "8990.00"},
-  {"c": "61087", "d": "DARDOS DART ZONE  X 50", "p": "WABRO", "pv": "23000.00", "pv": "10500.00"},
-  {"c": "929136", "d": "BOTTLE BESTEEZ BOTELLA PLEGABLE", "p": "WABRO", "pv": "23000.00", "pv": "11000.00"},
-  {"c": "58910", "d": "MOCHILA 1O\" NEOPRENE DINO ESPALDA", "p": "WABRO", "pv": "35000.00", "pv": "12000.00"},
-  {"c": "58911", "d": "MOCHILA 1O\" NEOPRENE HIPOPOTAMO ESPALDA", "p": "WABRO", "pv": "35000.00", "pv": "12000.00"},
-  {"c": "58913", "d": "MOCHILA 1O\" NEOPRENE MONO ESPALDA", "p": "WABRO", "pv": "35000.00", "pv": "12000.00"},
-  {"c": "91600", "d": "MOCHILA 1O\" NEOPRENE VAQUITA ESPALDA", "p": "WABRO", "pv": "35000.00", "pv": "12000.00"},
-  {"c": "91603", "d": "MOCHILA 1O\" NEOPRENE TIGRE ESPALDA", "p": "WABRO", "pv": "39000.00", "pv": "12000.00"},
-  {"c": "91604", "d": "MOCHILA 1O\" NEOPRENE LEON ESPALDA", "p": "WABRO", "pv": "39000.00", "pv": "12000.00"},
-  {"c": "91605", "d": "MOCHILA 1O\" NEOPRENE PERRO ESPALDA", "p": "WABRO", "pv": "39000.00", "pv": "12000.00"},
-  {"c": "91606", "d": "MOCHILA 1O\" NEOPRENE JIRAFA ESPALDA", "p": "WABRO", "pv": "35000.00", "pv": "12000.00"},
-  {"c": "91607", "d": "MOCHILA 1O\" NEOPRENE LADY BUG ESPALDA", "p": "WABRO", "pv": "35000.00", "pv": "12000.00"},
-  {"c": "27090", "d": "PELUCHES TY ANIMALES DE LA SELVA 14CM", "p": "WABRO", "pv": "26500.00", "pv": "12900.00"},
-  {"c": "61092", "d": "PISTOLA DART ZONE TACTICAL MASK", "p": "WABRO", "pv": "30000.00", "pv": "13000.00"},
-  {"c": "99684", "d": "CRY BABIES MAGIC TEARS TALENT BABIES", "p": "WABRO", "pv": "37800.00", "pv": "15300.00"},
-  {"c": "99682", "d": "CRY BABIES MAGIC TEARS BEACH BABIES", "p": "WABRO", "pv": "37800.00", "pv": "15990.00"},
-  {"c": "99683", "d": "CRY BABIES MAGIC TEARS SIA TROPICAL", "p": "WABRO", "pv": "52500.00", "pv": "20300.00"},
-  {"c": "99685", "d": "CRY BABIES MAGIC TEARS JUMPING MONSTERS", "p": "WABRO", "pv": "52500.00", "pv": "20300.00"},
-  {"c": "511212", "d": "LOL SURPRISE HAIR BEADS", "p": "WABRO", "pv": "45000.00", "pv": "22900.00"},
-  {"c": "F8995", "d": "MONOPOLY KNOCK OUT", "p": "WABRO", "pv": "49990.00", "pv": "23500.00"},
-  {"c": "27091", "d": "PELUCHE TY ANIMALES 23 CM", "p": "WABRO", "pv": "52500.00", "pv": "25500.00"},
-  {"c": "99689", "d": "CRY BABIES BFF SERIE 3 CONEY", "p": "WABRO", "pv": "71990.00", "pv": "25900.00"},
-  {"c": "99690", "d": "CRY BABIES BFF SERIE 3 JENNA", "p": "WABRO", "pv": "71990.00", "pv": "25900.00"},
-  {"c": "99691", "d": "CRY BABIES BFF SERIE 3 STELLA", "p": "WABRO", "pv": "71990.00", "pv": "25900.00"},
-  {"c": "99692", "d": "CRY BABIES BFF SERIE 3 ELODIE", "p": "WABRO", "pv": "71990.00", "pv": "25900.00"},
-  {"c": "E7873", "d": "AVN FIGURA ARTIC 29 CM IRON MAN", "p": "WABRO", "pv": "49990.00", "pv": "25990.00"},
-  {"c": "E7878", "d": "AVENGERS FIGURA ARTIC 29 CM IRON MAN", "p": "WABRO", "pv": "49990.00", "pv": "25990.00"},
-  {"c": "F2246", "d": "AVENGERS FIGURA ARTIC 29 CM LOKI", "p": "WABRO", "pv": "49990.00", "pv": "25990.00"},
-  {"c": "E7329/E8525", "d": "SPIDER-MAN FIGURA MILES MORALES 29 CM ARTIC.", "p": "WABRO", "pv": "49990.00", "pv": "26990.00"},
-  {"c": "99726", "d": "CRY BABIES MUÑECA 27 CM BFF DISNEY \"MINNIE\"", "p": "WABRO", "pv": "89980.00", "pv": "27000.00"},
-  {"c": "99733", "d": "CRY BABIES TUNY CUDDLES DISNEY", "p": "WABRO", "pv": "63990.00", "pv": "28990.00"},
-  {"c": "40445", "d": "FP PATA PATA AUTOBUS SCHOOL AMARILLO", "p": "WABRO", "pv": "70000.00", "pv": "33900.00"},
-  {"c": "40447", "d": "FP PATA PATA POPPER AUTO PRINCESS ROSA", "p": "WABRO", "pv": "70000.00", "pv": "33900.00"},
-  {"c": "987901", "d": "RAINBOW HIGH FASHION OPP DARIA ROSELYN", "p": "WABRO", "pv": "79990.00", "pv": "34200.00"},
-  {"c": "99681", "d": "CRY BABIES LOVING CARE", "p": "WABRO", "pv": "79990.00", "pv": "35990.00"},
-  {"c": "E7475", "d": "AVN HULK FIGURA 29 CM ARTIC.", "p": "WABRO", "pv": "74990.00", "pv": "39990.00"},
-  {"c": "98831", "d": "TWISTER", "p": "WABRO", "pv": "85000.00", "pv": "51990.00"},
-  {"c": "584094", "d": "LOL SURPRISE TWEENS MASQUERADE PARTY", "p": "WABRO", "pv": "140000.00", "pv": "59000.00"},
-  {"c": "588498", "d": "LOL OMG FASHION DOLL WESTERN CUTIE", "p": "WABRO", "pv": "139990.00", "pv": "59000.00"},
-  {"c": "61071", "d": "PISTOLA DART ZONE NEXUS PRO MAX", "p": "WABRO", "pv": "146500.00", "pv": "71900.00"},
-  {"c": "F9220", "d": "HASBRO NERF PISTOLA DE GEL", "p": "WABRO", "pv": "190000.00", "pv": "89900.00"}
+        {
+            "c": "99755",
+            "d": "CRY BABIES DAY CARE",
+            "p": "WABRO",
+            "pv": "99990.00",
+            "pm": "52900.00"
+        },
+        {
+            "c": "EO100",
+            "d": "PELUCHES POP-UP HEROES",
+            "p": "ARBREX",
+            "pv": "29900.00",
+            "pm": "12852.40"
+        },
+        {
+            "c": "7108",
+            "d": "CARS MACK GRANDE A FRICCION",
+            "p": "ARBREX",
+            "pv": "96850.00",
+            "pm": "41970.00"
+        },
+        {
+            "c": "72190",
+            "d": "HW VEHICULO 13 CM PULL BACK",
+            "p": "CAFFARO",
+            "pv": "13960.00",
+            "pm": "5500.00"
+        },
+        {
+            "c": "PNY38000",
+            "d": "PINYPON EMOCIONES",
+            "p": "CAFFARO",
+            "pv": "16980.00",
+            "pm": "8490.00"
+        },
+        {
+            "c": "PNY60000",
+            "d": "PINYPON TERRIFIC SERIE 14",
+            "p": "CAFFARO",
+            "pv": "16980.00",
+            "pm": "8490.00"
+        },
+        {
+            "c": "15570",
+            "d": "PINYPON NEW LOOKS ESTILOS DE PELO",
+            "p": "CAFFARO",
+            "pv": "23800.00",
+            "pm": "11900.00"
+        },
+        {
+            "c": "1753",
+            "d": "GABBY-S DOLLHOUSE BIJOURRIFIC DELUXE",
+            "p": "CAFFARO",
+            "pv": "30000.00",
+            "pm": "15000.00"
+        },
+        {
+            "c": "331614",
+            "d": "PHLAT BALL PELOTA PLEGABLE AZUL",
+            "p": "CAFFARO",
+            "pv": "35960.00",
+            "pm": "17980.00"
+        },
+        {
+            "c": "36202",
+            "d": "GABBY´S DOLLHOUSE MUÑECA 23 CM",
+            "p": "CAFFARO",
+            "pv": "63000.00",
+            "pm": "31500.00"
+        },
+        {
+            "c": "30782",
+            "d": "AUTOS MATCHBOX BASICOS SURTIDOS",
+            "p": "COMPAÑIA SUR LATINA",
+            "pv": "6500.00",
+            "pm": "3490.00"
+        },
+        {
+            "c": "C4982",
+            "d": "HW AUTO",
+            "p": "COMPAÑIA SUR LATINA",
+            "pv": "6500.00",
+            "pm": "3490.00"
+        },
+        {
+            "c": "JDF56",
+            "d": "JUEGO DE MESA UNO EXPRESS",
+            "p": "COMPAÑIA SUR LATINA",
+            "pv": "13700.00",
+            "pm": "6500.00"
+        },
+        {
+            "c": "K5904",
+            "d": "HW PACK X 3 AUTOS SURTIDOS",
+            "p": "COMPAÑIA SUR LATINA",
+            "pv": "18500.00",
+            "pm": "8900.00"
+        },
+        {
+            "c": "T7439",
+            "d": "BARBIE CLASICA VESTIDO AZUL",
+            "p": "COMPAÑIA SUR LATINA",
+            "pv": "19990.00",
+            "pm": "9900.00"
+        },
+        {
+            "c": "T7580",
+            "d": "BARBIE FAB GLITZ",
+            "p": "COMPAÑIA SUR LATINA",
+            "pv": "28500.00",
+            "pm": "14500.00"
+        },
+        {
+            "c": "1806",
+            "d": "HOT WHEELS X 5",
+            "p": "COMPAÑIA SUR LATINA",
+            "pv": "32000.00",
+            "pm": "14900.00"
+        },
+        {
+            "c": "C1817",
+            "d": "MATCHBOX PACK AUTOS X 5 UNIDADES",
+            "p": "COMPAÑIA SUR LATINA",
+            "pv": "32000.00",
+            "pm": "14900.00"
+        },
+        {
+            "c": "JCX93",
+            "d": "MUÑECA CHELSEA POP REVEAL SERIE TEA",
+            "p": "COMPAÑIA SUR LATINA",
+            "pv": "41900.00",
+            "pm": "19900.00"
+        },
+        {
+            "c": "HRR13",
+            "d": "MUÑECA BARBIE UNICORNIO ROSA",
+            "p": "COMPAÑIA SUR LATINA",
+            "pv": "54500.00",
+            "pm": "25900.00"
+        },
+        {
+            "c": "FBR37",
+            "d": "BARBIE FASHIONISTAS",
+            "p": "COMPAÑIA SUR LATINA",
+            "pv": "61000.00",
+            "pm": "29900.00"
+        },
+        {
+            "c": "2985",
+            "d": "MOTOR SPEED MOTO DIE CAST",
+            "p": "DITOYS",
+            "pv": "5800.00",
+            "pm": "2900.00"
+        },
+        {
+            "c": "2688",
+            "d": "SPIDERMAN TRUCKS PULL BACK",
+            "p": "DITOYS",
+            "pv": "6800.00",
+            "pm": "3500.00"
+        },
+        {
+            "c": "5005",
+            "d": "SMOOSHI POTE X 2 GALERA FELIZ",
+            "p": "ERREKAESE",
+            "pv": "13000.00",
+            "pm": "5650.00"
+        },
+        {
+            "c": "15003",
+            "d": "BBUDDIEEZ MI PRIMER KIT INICIO",
+            "p": "FIBRO",
+            "pv": "9200.00",
+            "pm": "4200.00"
+        },
+        {
+            "c": "15007",
+            "d": "BBUDDIEEZ KIT BOLA TRANSPORTE",
+            "p": "FIBRO",
+            "pv": "15800.00",
+            "pm": "7200.00"
+        },
+        {
+            "c": "15004",
+            "d": "BBUDDIEEZ MI PRIMER KIT PROFESIONAL",
+            "p": "FIBRO ",
+            "pv": "11200.00",
+            "pm": "5100.00"
+        },
+        {
+            "c": "8290",
+            "d": "LANZADOR WATER PUMP 37 CM",
+            "p": "FUN TOYS ",
+            "pv": "7200.00",
+            "pm": "2800.00"
+        },
+        {
+            "c": "8291",
+            "d": "LANZADOR DE AGUA WATER PUMP 60 CM",
+            "p": "FUN TOYS ",
+            "pv": "7800.00",
+            "pm": "3200.00"
+        },
+        {
+            "c": "4191",
+            "d": "BATMAN SET DE BUCEO GRANDE",
+            "p": "FUN TOYS ",
+            "pv": "18500.00",
+            "pm": "8000.00"
+        },
+        {
+            "c": "4192",
+            "d": "SUPERMAN SET DE BUCEO GRANDE",
+            "p": "FUN TOYS ",
+            "pv": "18500.00",
+            "pm": "8000.00"
+        },
+        {
+            "c": "635419",
+            "d": "LANZA AGUA CHICO WATER PUMP",
+            "p": "IMPORTADORA SUDAMERICANA",
+            "pv": "4500.00",
+            "pm": "1500.00"
+        },
+        {
+            "c": "635420",
+            "d": "LANZA AGUA GRANDE WATER PUMP",
+            "p": "IMPORTADORA SUDAMERICANA",
+            "pv": "5300.00",
+            "pm": "1700.00"
+        },
+        {
+            "c": "15079",
+            "d": "AUTITOS MAISTO",
+            "p": "IMPORTADORA SUDAMERICANA",
+            "pv": "6800.00",
+            "pm": "2600.00"
+        },
+        {
+            "c": "635421",
+            "d": "PISTOLA LANZA AGUA WATER PUMP",
+            "p": "IMPORTADORA SUDAMERICANA",
+            "pv": "8000.00",
+            "pm": "2800.00"
+        },
+        {
+            "c": "4803-4374",
+            "d": "BUG ATTACK 2 BICHOS",
+            "p": "IMPORTADORA SUDAMERICANA",
+            "pv": "10800.00",
+            "pm": "4690.00"
+        },
+        {
+            "c": "7600-36795",
+            "d": "X-SHOT INSANITY MICRO",
+            "p": "IMPORTADORA SUDAMERICANA",
+            "pv": "23600.00",
+            "pm": "11750.00"
+        },
+        {
+            "c": "7700",
+            "d": "BABYCORNS PEQUEÑO ",
+            "p": "IMPORTADORA SUDAMERICANA",
+            "pv": "62800.00",
+            "pm": "33500.00"
+        },
+        {
+            "c": "7701",
+            "d": "BABYCORNS GRANDE ",
+            "p": "IMPORTADORA SUDAMERICANA",
+            "pv": "119900.00",
+            "pm": "59500.00"
+        },
+        {
+            "c": "566554",
+            "d": "PUZZLE PLAYMOBIL SURTIDOS",
+            "p": "IMPORTAL GROUP ",
+            "pv": "5999.00",
+            "pm": "2200.00"
+        },
+        {
+            "c": "70732",
+            "d": "FIGURA SORPRESA SERIE 21 AZUL",
+            "p": "INTEK ",
+            "pv": "11490.00",
+            "pm": "6350.00"
+        },
+        {
+            "c": "70733",
+            "d": "FIGURA SORPRESA SERIE 21 VIOLETA",
+            "p": "INTEK ",
+            "pv": "11490.00",
+            "pm": "6350.00"
+        },
+        {
+            "c": "HWCC16",
+            "d": "HOT WHEELS GUARDA AUTOS PLASTICO",
+            "p": "INTEK ",
+            "pv": "19990.00",
+            "pm": "10300.00"
+        },
+        {
+            "c": "70693",
+            "d": "DUO PACK VELOCIRAPTOR Y SAQUEADOR",
+            "p": "INTEK ",
+            "pv": "25990.00",
+            "pm": "14200.00"
+        },
+        {
+            "c": "HWCC2",
+            "d": "CAR CASE HOT WHEELS PLATEADO",
+            "p": "INTEK ",
+            "pv": "27990.00",
+            "pm": "14200.00"
+        },
+        {
+            "c": "HWCC22",
+            "d": "CAR CASE HOT WHEELS VINTAGE BLACK",
+            "p": "INTEK ",
+            "pv": "27990.00",
+            "pm": "14200.00"
+        },
+        {
+            "c": "HWCC19",
+            "d": "HOT WHEELS CAR CASE C/AUTO ARMABLE",
+            "p": "INTEK ",
+            "pv": "44990.00",
+            "pm": "21500.00"
+        },
+        {
+            "c": "70676",
+            "d": "SET DE REGALO ENTRENADORA DE PERROS",
+            "p": "INTEK ",
+            "pv": "44990.00",
+            "pm": "21995.00"
+        },
+        {
+            "c": "HWCC18",
+            "d": "HOT WHELLS GUARDA AUTOS RUEDA METALICA",
+            "p": "INTEK ",
+            "pv": "49990.00",
+            "pm": "25100.00"
+        },
+        {
+            "c": "SBCB1",
+            "d": "PELOTA COUNTER BALL",
+            "p": "INTEK ",
+            "pv": "49990.00",
+            "pm": "26990.00"
+        },
+        {
+            "c": "43102",
+            "d": "GOO JIT ZU MINECRAFT ",
+            "p": "INTEK ",
+            "pv": "57990.00",
+            "pm": "29900.00"
+        },
+        {
+            "c": "42996",
+            "d": "GOO JIT ZU MARVEL SPIDERMAN",
+            "p": "INTEK ",
+            "pv": "57990.00",
+            "pm": "29990.00"
+        },
+        {
+            "c": "BBCR6",
+            "d": "CAJA REGISTRADORA BARBIE C/SCANER",
+            "p": "INTEK ",
+            "pv": "79990.00",
+            "pm": "34990.00"
+        },
+        {
+            "c": "HWCC4",
+            "d": "CAR CASE MULTILANZADOR HW",
+            "p": "INTEK ",
+            "pv": "79990.00",
+            "pm": "34990.00"
+        },
+        {
+            "c": "70820",
+            "d": "STARTER PACK STUNTSHOW QUAD CON RAMPA",
+            "p": "INTEK ",
+            "pv": "89990.00",
+            "pm": "38500.00"
+        },
+        {
+            "c": "71234",
+            "d": "CAMION DE RECICLAJE",
+            "p": "INTEK ",
+            "pv": "149990.00",
+            "pm": "72990.00"
+        },
+        {
+            "c": "71233",
+            "d": "CAMION DE BOMBEROS",
+            "p": "INTEK ",
+            "pv": "169990.00",
+            "pm": "89990.00"
+        },
+        {
+            "c": "IKCAP001",
+            "d": "CAPIBARA C/MOCHILA",
+            "p": "ISAKITO",
+            "pv": "34100.00",
+            "pm": "15000.00"
+        },
+        {
+            "c": "IM8540",
+            "d": "TRIOMINO IMPORTADO CON 4 ATRILES",
+            "p": "JUEBIL ",
+            "pv": "32600.00",
+            "pm": "13990.00"
+        },
+        {
+            "c": "BI8750",
+            "d": "RUMMY BURAKO FICHA MARFIL",
+            "p": "JUEBIL ",
+            "pv": "79500.00",
+            "pm": "38000.00"
+        },
+        {
+            "c": "6268 (YQ00350)",
+            "d": "LETRAS Y NUMEROS DE MADERA ENCASTRE",
+            "p": "JUGUETECH ",
+            "pv": "12300.00",
+            "pm": "5250.00"
+        },
+        {
+            "c": "6760 (006A)",
+            "d": "MAGNETIC MAGFORMERS 38 PIEZAS",
+            "p": "JUGUETECH ",
+            "pv": "66000.00",
+            "pm": "29990.00"
+        },
+        {
+            "c": "DWJ33",
+            "d": "BARBIE CHELSEA SURTIDAS",
+            "p": "LADAI E HIJOS",
+            "pv": "20500.00",
+            "pm": "9500.00"
+        },
+        {
+            "c": "HGR18",
+            "d": "BARBIE DREAMTOPIA UNICORNIO PELO AZUL",
+            "p": "LADAI E HIJOS",
+            "pv": "57900.00",
+            "pm": "27900.00"
+        },
+        {
+            "c": "106",
+            "d": "JGO.DE MATE CON TERMO EN BOLSA",
+            "p": "LIONEL´S ",
+            "pv": "5400.00",
+            "pm": "2300.00"
+        },
+        {
+            "c": "52020B",
+            "d": "1:60 WELLY BLISTER",
+            "p": "LIONEL´S ",
+            "pv": "7300.00",
+            "pm": "3600.00"
+        },
+        {
+            "c": "43733",
+            "d": "1:36 CHEVROLET CORVETTE 1963",
+            "p": "LIONEL´S ",
+            "pv": "17990.00",
+            "pm": "8990.00"
+        },
+        {
+            "c": "43799",
+            "d": "1:36 MERCEDES BENZ W125",
+            "p": "LIONEL´S ",
+            "pv": "17990.00",
+            "pm": "8990.00"
+        },
+        {
+            "c": "43816",
+            "d": "1:36 PORSCHE 550 SPYDER",
+            "p": "LIONEL´S ",
+            "pv": "17990.00",
+            "pm": "8990.00"
+        },
+        {
+            "c": "49766",
+            "d": "1:36 MINI COOPER",
+            "p": "LIONEL´S ",
+            "pv": "17990.00",
+            "pm": "8990.00"
+        },
+        {
+            "c": "1732-32030",
+            "d": "POWER ROCKERS FIG.C/ESCENARIO",
+            "p": "NEXT POINT",
+            "pv": "24000.00",
+            "pm": "11500.00"
+        },
+        {
+            "c": "NA201980",
+            "d": "YO YO DE METAL",
+            "p": "NOBU",
+            "pv": "6000.00",
+            "pm": "2300.00"
+        },
+        {
+            "c": "8453",
+            "d": "MINI PISTOLA DE AGUA BASE X SPLASH",
+            "p": "SEBIGUS",
+            "pv": "3200.00",
+            "pm": "1290.00"
+        },
+        {
+            "c": "54424",
+            "d": "AUTO METALICO GO SPEED 1:64",
+            "p": "SEBIGUS",
+            "pv": "4500.00",
+            "pm": "1890.00"
+        },
+        {
+            "c": "52255",
+            "d": "MOTO A FRICCION",
+            "p": "SEBIGUS",
+            "pv": "6000.00",
+            "pm": "2450.00"
+        },
+        {
+            "c": "52889",
+            "d": "FROZEN SET DE BIJOUTERIE",
+            "p": "SEBIGUS",
+            "pv": "7000.00",
+            "pm": "2790.00"
+        },
+        {
+            "c": "53863",
+            "d": "MAMADERA MAGICA P/BEBOTE X2",
+            "p": "SEBIGUS",
+            "pv": "6600.00",
+            "pm": "2850.00"
+        },
+        {
+            "c": "54452",
+            "d": "MUÑECA TINY FANTASY",
+            "p": "SEBIGUS",
+            "pv": "7400.00",
+            "pm": "2990.00"
+        },
+        {
+            "c": "50594",
+            "d": "VARITA PRINCESA C/LUZ Y SONIDO",
+            "p": "SEBIGUS",
+            "pv": "8000.00",
+            "pm": "3365.00"
+        },
+        {
+            "c": "8480",
+            "d": "LANZADOR DE AGUA SPIDERMAN",
+            "p": "SEBIGUS",
+            "pv": "8500.00",
+            "pm": "3400.00"
+        },
+        {
+            "c": "8867",
+            "d": "LANZADOR DE AGUA SPIDERMAN",
+            "p": "SEBIGUS",
+            "pv": "8500.00",
+            "pm": "3500.00"
+        },
+        {
+            "c": "51066",
+            "d": "PIZARRA MAGICA MINI",
+            "p": "SEBIGUS",
+            "pv": "10500.00",
+            "pm": "4400.00"
+        },
+        {
+            "c": "8842",
+            "d": "SET DE BUCEO PATAS Y ANTIPARRAS",
+            "p": "SEBIGUS",
+            "pv": "10800.00",
+            "pm": "4500.00"
+        },
+        {
+            "c": "8843",
+            "d": "SET DE BUCEO NENA BASE X-PLASH",
+            "p": "SEBIGUS",
+            "pv": "10500.00",
+            "pm": "4550.00"
+        },
+        {
+            "c": "4944",
+            "d": "PARAGUAS CON SILBATO 6 MODELOS",
+            "p": "SEBIGUS",
+            "pv": "22000.00",
+            "pm": "5000.00"
+        },
+        {
+            "c": "4945",
+            "d": "PARAGUAS CON SILBATO 5 MODELOS",
+            "p": "SEBIGUS",
+            "pv": "22000.00",
+            "pm": "5000.00"
+        },
+        {
+            "c": "4971",
+            "d": "PARAGUAS BATMAN 4 MODELOS",
+            "p": "SEBIGUS",
+            "pv": "22000.00",
+            "pm": "5000.00"
+        },
+        {
+            "c": "4973",
+            "d": "PARAGUAS SUPERMAN CON SILBATO",
+            "p": "SEBIGUS",
+            "pv": "22000.00",
+            "pm": "5000.00"
+        },
+        {
+            "c": "4976",
+            "d": "PARAGUAS LIGA DE LA JUSTICIA CON SILBATO",
+            "p": "SEBIGUS",
+            "pv": "22000.00",
+            "pm": "5000.00"
+        },
+        {
+            "c": "55816",
+            "d": "JUEGO DE MADERA DIDACTICO P/VESTIR",
+            "p": "SEBIGUS",
+            "pv": "13500.00",
+            "pm": "5750.00"
+        },
+        {
+            "c": "8533",
+            "d": "PISTOLA DE AGUA MEDIANA IRON MAN",
+            "p": "SEBIGUS",
+            "pv": "15000.00",
+            "pm": "6230.00"
+        },
+        {
+            "c": "53479",
+            "d": "MUÑECA TINY FASHION",
+            "p": "SEBIGUS",
+            "pv": "17800.00",
+            "pm": "7680.00"
+        },
+        {
+            "c": "55405",
+            "d": "AVENGERS SET DE AUTOS METALICOS",
+            "p": "SEBIGUS",
+            "pv": "17500.00",
+            "pm": "7690.00"
+        },
+        {
+            "c": "55439",
+            "d": "X-DINO C/LUZ Y SONIDO",
+            "p": "SEBIGUS",
+            "pv": "48000.00",
+            "pm": "21080.00"
+        },
+        {
+            "c": "14067",
+            "d": "TEAMSTERZ AUTOS DE METAL 7 CM",
+            "p": "WABRO",
+            "pv": "5400.00",
+            "pm": "2000.00"
+        },
+        {
+            "c": "74122",
+            "d": "SQUISHY",
+            "p": "WABRO",
+            "pv": "5500.00",
+            "pm": "2600.00"
+        },
+        {
+            "c": "74132",
+            "d": "ALLIEN WALL CREEPER",
+            "p": "WABRO",
+            "pv": "6200.00",
+            "pm": "2700.00"
+        },
+        {
+            "c": "63119",
+            "d": "ASTRO VENTURE FIGURA 8 CM ARTICULADA",
+            "p": "WABRO",
+            "pv": "6500.00",
+            "pm": "2990.00"
+        },
+        {
+            "c": "74108",
+            "d": "ALLIEN BOGGIE C/LUZ",
+            "p": "WABRO",
+            "pv": "7600.00",
+            "pm": "3500.00"
+        },
+        {
+            "c": "74133",
+            "d": "SERPIENTE STRETCHY",
+            "p": "WABRO",
+            "pv": "11700.00",
+            "pm": "4990.00"
+        },
+        {
+            "c": "99547",
+            "d": "CRY BABIES MUÑECA 13 CM ",
+            "p": "WABRO",
+            "pv": "15000.00",
+            "pm": "5500.00"
+        },
+        {
+            "c": "99663",
+            "d": "CRY BABIES LITTLE CHANGERS",
+            "p": "WABRO",
+            "pv": "36000.00",
+            "pm": "6000.00"
+        },
+        {
+            "c": "59057",
+            "d": "WOW PODS MARVEL BLACK PANTHER 162",
+            "p": "WABRO",
+            "pv": "15000.00",
+            "pm": "6500.00"
+        },
+        {
+            "c": "59058",
+            "d": "WOW PODS MARVEL SHURI 163",
+            "p": "WABRO",
+            "pv": "15000.00",
+            "pm": "6500.00"
+        },
+        {
+            "c": "59067",
+            "d": "WOW PODS MARVEL WINTER SOLDIER 157",
+            "p": "WABRO",
+            "pv": "15000.00",
+            "pm": "6500.00"
+        },
+        {
+            "c": "59073",
+            "d": "WOW PODS HARRY POTTER SNAPE 151",
+            "p": "WABRO",
+            "pv": "15000.00",
+            "pm": "6500.00"
+        },
+        {
+            "c": "59076",
+            "d": "WOW PODS HARRY POTTER DRACO 152",
+            "p": "WABRO",
+            "pv": "15000.00",
+            "pm": "6500.00"
+        },
+        {
+            "c": "59077",
+            "d": "WOW PODS HARRY POTTER RON 150",
+            "p": "WABRO",
+            "pv": "15000.00",
+            "pm": "6500.00"
+        },
+        {
+            "c": "59078",
+            "d": "WOW PODS HARRY POTTER SIRIUS 151",
+            "p": "WABRO",
+            "pv": "15000.00",
+            "pm": "6500.00"
+        },
+        {
+            "c": "59152",
+            "d": "WOW PODS HARRY POTTER VOLDEMORT 216",
+            "p": "WABRO",
+            "pv": "15000.00",
+            "pm": "6500.00"
+        },
+        {
+            "c": "59153",
+            "d": "WOW PODS HARRY POTTER HAGRID 215",
+            "p": "WABRO",
+            "pv": "15000.00",
+            "pm": "6500.00"
+        },
+        {
+            "c": "74142",
+            "d": "PLAYSET SUPER SAND ARENA KINETICA",
+            "p": "WABRO",
+            "pv": "15000.00",
+            "pm": "6800.00"
+        },
+        {
+            "c": "F0040",
+            "d": "NERF DARDOS ELITE X 20",
+            "p": "WABRO",
+            "pv": "28800.00",
+            "pm": "8990.00"
+        },
+        {
+            "c": "61087",
+            "d": "DARDOS DART ZONE  X 50",
+            "p": "WABRO",
+            "pv": "23000.00",
+            "pm": "10500.00"
+        },
+        {
+            "c": "929136",
+            "d": "BOTTLE BESTEEZ BOTELLA PLEGABLE",
+            "p": "WABRO",
+            "pv": "23000.00",
+            "pm": "11000.00"
+        },
+        {
+            "c": "58910",
+            "d": "MOCHILA 1O\" NEOPRENE DINO ESPALDA",
+            "p": "WABRO",
+            "pv": "35000.00",
+            "pm": "12000.00"
+        },
+        {
+            "c": "58911",
+            "d": "MOCHILA 1O\" NEOPRENE HIPOPOTAMO ESPALDA",
+            "p": "WABRO",
+            "pv": "35000.00",
+            "pm": "12000.00"
+        },
+        {
+            "c": "58913",
+            "d": "MOCHILA 1O\" NEOPRENE MONO ESPALDA",
+            "p": "WABRO",
+            "pv": "35000.00",
+            "pm": "12000.00"
+        },
+        {
+            "c": "91600",
+            "d": "MOCHILA 1O\" NEOPRENE VAQUITA ESPALDA",
+            "p": "WABRO",
+            "pv": "35000.00",
+            "pm": "12000.00"
+        },
+        {
+            "c": "91603",
+            "d": "MOCHILA 1O\" NEOPRENE TIGRE ESPALDA",
+            "p": "WABRO",
+            "pv": "39000.00",
+            "pm": "12000.00"
+        },
+        {
+            "c": "91604",
+            "d": "MOCHILA 1O\" NEOPRENE LEON ESPALDA",
+            "p": "WABRO",
+            "pv": "39000.00",
+            "pm": "12000.00"
+        },
+        {
+            "c": "91605",
+            "d": "MOCHILA 1O\" NEOPRENE PERRO ESPALDA",
+            "p": "WABRO",
+            "pv": "39000.00",
+            "pm": "12000.00"
+        },
+        {
+            "c": "91606",
+            "d": "MOCHILA 1O\" NEOPRENE JIRAFA ESPALDA",
+            "p": "WABRO",
+            "pv": "35000.00",
+            "pm": "12000.00"
+        },
+        {
+            "c": "91607",
+            "d": "MOCHILA 1O\" NEOPRENE LADY BUG ESPALDA",
+            "p": "WABRO",
+            "pv": "35000.00",
+            "pm": "12000.00"
+        },
+        {
+            "c": "27090",
+            "d": "PELUCHES TY ANIMALES DE LA SELVA 14CM",
+            "p": "WABRO",
+            "pv": "26500.00",
+            "pm": "12900.00"
+        },
+        {
+            "c": "61092",
+            "d": "PISTOLA DART ZONE TACTICAL MASK",
+            "p": "WABRO",
+            "pv": "30000.00",
+            "pm": "13000.00"
+        },
+        {
+            "c": "99684",
+            "d": "CRY BABIES MAGIC TEARS TALENT BABIES",
+            "p": "WABRO",
+            "pv": "37800.00",
+            "pm": "15300.00"
+        },
+        {
+            "c": "99682",
+            "d": "CRY BABIES MAGIC TEARS BEACH BABIES",
+            "p": "WABRO",
+            "pv": "37800.00",
+            "pm": "15990.00"
+        },
+        {
+            "c": "99683",
+            "d": "CRY BABIES MAGIC TEARS SIA TROPICAL",
+            "p": "WABRO",
+            "pv": "52500.00",
+            "pm": "20300.00"
+        },
+        {
+            "c": "99685",
+            "d": "CRY BABIES MAGIC TEARS JUMPING MONSTERS",
+            "p": "WABRO",
+            "pv": "52500.00",
+            "pm": "20300.00"
+        },
+        {
+            "c": "511212",
+            "d": "LOL SURPRISE HAIR BEADS",
+            "p": "WABRO",
+            "pv": "45000.00",
+            "pm": "22900.00"
+        },
+        {
+            "c": "F8995",
+            "d": "MONOPOLY KNOCK OUT",
+            "p": "WABRO",
+            "pv": "49990.00",
+            "pm": "23500.00"
+        },
+        {
+            "c": "27091",
+            "d": "PELUCHE TY ANIMALES 23 CM",
+            "p": "WABRO",
+            "pv": "52500.00",
+            "pm": "25500.00"
+        },
+        {
+            "c": "99689",
+            "d": "CRY BABIES BFF SERIE 3 CONEY",
+            "p": "WABRO",
+            "pv": "71990.00",
+            "pm": "25900.00"
+        },
+        {
+            "c": "99690",
+            "d": "CRY BABIES BFF SERIE 3 JENNA",
+            "p": "WABRO",
+            "pv": "71990.00",
+            "pm": "25900.00"
+        },
+        {
+            "c": "99691",
+            "d": "CRY BABIES BFF SERIE 3 STELLA",
+            "p": "WABRO",
+            "pv": "71990.00",
+            "pm": "25900.00"
+        },
+        {
+            "c": "99692",
+            "d": "CRY BABIES BFF SERIE 3 ELODIE",
+            "p": "WABRO",
+            "pv": "71990.00",
+            "pm": "25900.00"
+        },
+        {
+            "c": "E7873",
+            "d": "AVN FIGURA ARTIC 29 CM IRON MAN",
+            "p": "WABRO",
+            "pv": "49990.00",
+            "pm": "25990.00"
+        },
+        {
+            "c": "E7878",
+            "d": "AVENGERS FIGURA ARTIC 29 CM IRON MAN",
+            "p": "WABRO",
+            "pv": "49990.00",
+            "pm": "25990.00"
+        },
+        {
+            "c": "F2246",
+            "d": "AVENGERS FIGURA ARTIC 29 CM LOKI",
+            "p": "WABRO",
+            "pv": "49990.00",
+            "pm": "25990.00"
+        },
+        {
+            "c": "E7329/E8525",
+            "d": "SPIDER-MAN FIGURA MILES MORALES 29 CM ARTIC.",
+            "p": "WABRO",
+            "pv": "49990.00",
+            "pm": "26990.00"
+        },
+        {
+            "c": "99726",
+            "d": "CRY BABIES MUÑECA 27 CM BFF DISNEY \"MINNIE\"",
+            "p": "WABRO",
+            "pv": "89980.00",
+            "pm": "27000.00"
+        },
+        {
+            "c": "99733",
+            "d": "CRY BABIES TUNY CUDDLES DISNEY",
+            "p": "WABRO",
+            "pv": "63990.00",
+            "pm": "28990.00"
+        },
+        {
+            "c": "40445",
+            "d": "FP PATA PATA AUTOBUS SCHOOL AMARILLO",
+            "p": "WABRO",
+            "pv": "70000.00",
+            "pm": "33900.00"
+        },
+        {
+            "c": "40447",
+            "d": "FP PATA PATA POPPER AUTO PRINCESS ROSA",
+            "p": "WABRO",
+            "pv": "70000.00",
+            "pm": "33900.00"
+        },
+        {
+            "c": "987901",
+            "d": "RAINBOW HIGH FASHION OPP DARIA ROSELYN",
+            "p": "WABRO",
+            "pv": "79990.00",
+            "pm": "34200.00"
+        },
+        {
+            "c": "99681",
+            "d": "CRY BABIES LOVING CARE",
+            "p": "WABRO",
+            "pv": "79990.00",
+            "pm": "35990.00"
+        },
+        {
+            "c": "E7475",
+            "d": "AVN HULK FIGURA 29 CM ARTIC.",
+            "p": "WABRO",
+            "pv": "74990.00",
+            "pm": "39990.00"
+        },
+        {
+            "c": "98831",
+            "d": "TWISTER",
+            "p": "WABRO",
+            "pv": "85000.00",
+            "pm": "51990.00"
+        },
+        {
+            "c": "584094",
+            "d": "LOL SURPRISE TWEENS MASQUERADE PARTY",
+            "p": "WABRO",
+            "pv": "140000.00",
+            "pm": "59000.00"
+        },
+        {
+            "c": "588498",
+            "d": "LOL OMG FASHION DOLL WESTERN CUTIE",
+            "p": "WABRO",
+            "pv": "139990.00",
+            "pm": "59000.00"
+        },
+        {
+            "c": "61071",
+            "d": "PISTOLA DART ZONE NEXUS PRO MAX",
+            "p": "WABRO",
+            "pv": "146500.00",
+            "pm": "71900.00"
+        },
+        {
+            "c": "F9220",
+            "d": "HASBRO NERF PISTOLA DE GEL",
+            "p": "WABRO",
+            "pv": "190000.00",
+            "pm": "89900.00"
+        }
 ]
