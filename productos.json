@@ -7,6 +7,13 @@
             "pm": "52900.00"
         },
         {
+            "c": "BBCR6",
+            "d": "CAJA REGISTRADORA BARBIE C/SCANER",
+            "p": "INTEK ",
+            "pv": "79990.00",
+            "pm": "34990.00"
+        },
+        {
             "c": "EO100",
             "d": "PELUCHES POP-UP HEROES",
             "p": "ARBREX",
@@ -230,13 +237,13 @@
             "pv": "6800.00",
             "pm": "2600.00"
         },
-        /*{
+        {
             "c": "635421",
             "d": "PISTOLA LANZA AGUA WATER PUMP",
             "p": "IMPORTADORA SUDAMERICANA",
             "pv": "8000.00",
             "pm": "2800.00"
-        },*/
+        },
         {
             "c": "4803-4374",
             "d": "BUG ATTACK 2 BICHOS",
@@ -302,14 +309,14 @@
         },
         {
             "c": "HWCC2",
-            "d": "CAR CASE HOT WHEELS PLATEADO",
+            "d": "CAR CASE HOT WHEELS",
             "p": "INTEK ",
             "pv": "27990.00",
             "pm": "14200.00"
         },
         {
             "c": "HWCC22",
-            "d": "CAR CASE HOT WHEELS VINTAGE BLACK",
+            "d": "CAR CASE HOT WHEELS VINTAGE",
             "p": "INTEK ",
             "pv": "27990.00",
             "pm": "14200.00"
@@ -348,13 +355,6 @@
             "p": "INTEK ",
             "pv": "57990.00",
             "pm": "29990.00"
-        },
-        {
-            "c": "BBCR6",
-            "d": "CAJA REGISTRADORA BARBIE C/SCANER",
-            "p": "INTEK ",
-            "pv": "79990.00",
-            "pm": "34990.00"
         },
         {
             "c": "HWCC4",
@@ -397,13 +397,6 @@
             "p": "JUEBIL ",
             "pv": "32600.00",
             "pm": "13990.00"
-        },
-        {
-            "c": "BI8750",
-            "d": "RUMMY BURAKO FICHA MARFIL",
-            "p": "JUEBIL ",
-            "pv": "79500.00",
-            "pm": "38000.00"
         },
         {
             "c": "6268",
@@ -490,13 +483,6 @@
             "pm": "2300.00"
         },
         {
-            "c": "8453",
-            "d": "MINI PISTOLA DE AGUA BASE X SPLASH",
-            "p": "SEBIGUS",
-            "pv": "3200.00",
-            "pm": "1290.00"
-        },
-        {
             "c": "54424",
             "d": "AUTO METALICO GO SPEED 1:64",
             "p": "SEBIGUS",
@@ -539,13 +525,6 @@
             "pm": "3365.00"
         },
         {
-            "c": "8480",
-            "d": "LANZADOR DE AGUA SPIDERMAN",
-            "p": "SEBIGUS",
-            "pv": "8500.00",
-            "pm": "3400.00"
-        },
-        {
             "c": "8867",
             "d": "LANZADOR DE AGUA SPIDERMAN",
             "p": "SEBIGUS",
@@ -560,50 +539,8 @@
             "pm": "4400.00"
         },
         {
-            "c": "8842",
-            "d": "SET DE BUCEO PATAS Y ANTIPARRAS",
-            "p": "SEBIGUS",
-            "pv": "10800.00",
-            "pm": "4500.00"
-        },
-        {
-            "c": "8843",
-            "d": "SET DE BUCEO NENA BASE X-PLASH",
-            "p": "SEBIGUS",
-            "pv": "10500.00",
-            "pm": "4550.00"
-        },
-        {
             "c": "4944",
-            "d": "PARAGUAS CON SILBATO 6 MODELOS",
-            "p": "SEBIGUS",
-            "pv": "22000.00",
-            "pm": "5000.00"
-        },
-        {
-            "c": "4945",
-            "d": "PARAGUAS CON SILBATO 5 MODELOS",
-            "p": "SEBIGUS",
-            "pv": "22000.00",
-            "pm": "5000.00"
-        },
-        {
-            "c": "4971",
-            "d": "PARAGUAS BATMAN 4 MODELOS",
-            "p": "SEBIGUS",
-            "pv": "22000.00",
-            "pm": "5000.00"
-        },
-        {
-            "c": "4973",
-            "d": "PARAGUAS SUPERMAN CON SILBATO",
-            "p": "SEBIGUS",
-            "pv": "22000.00",
-            "pm": "5000.00"
-        },
-        {
-            "c": "4976",
-            "d": "PARAGUAS LIGA DE LA JUSTICIA CON SILBATO",
+            "d": "PARAGUAS CON SILBATO",
             "p": "SEBIGUS",
             "pv": "22000.00",
             "pm": "5000.00"
@@ -614,13 +551,6 @@
             "p": "SEBIGUS",
             "pv": "13500.00",
             "pm": "5750.00"
-        },
-        {
-            "c": "8533",
-            "d": "PISTOLA DE AGUA MEDIANA IRON MAN",
-            "p": "SEBIGUS",
-            "pv": "15000.00",
-            "pm": "6230.00"
         },
         {
             "c": "53479",
