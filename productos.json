@@ -7,11 +7,32 @@
             "pm": "52900.00"
         },
         {
+            "c": "99681",
+            "d": "CRY BABIES LOVING CARE",
+            "p": "WABRO",
+            "pv": "79990.00",
+            "pm": "35990.00"
+        },
+        {
             "c": "BBCR6",
             "d": "CAJA REGISTRADORA BARBIE C/SCANER",
             "p": "INTEK ",
             "pv": "79990.00",
             "pm": "34990.00"
+        },
+        {
+            "c": "HWCC19",
+            "d": "HOT WHEELS CAR CASE C/AUTO ARMABLE",
+            "p": "INTEK ",
+            "pv": "44990.00",
+            "pm": "21500.00"
+        },
+        {
+            "c": "HWCC22",
+            "d": "CAR CASE HOT WHEELS VINTAGE",
+            "p": "INTEK ",
+            "pv": "27990.00",
+            "pm": "14200.00"
         },
         {
             "c": "EO100",
@@ -313,20 +334,6 @@
             "p": "INTEK ",
             "pv": "27990.00",
             "pm": "14200.00"
-        },
-        {
-            "c": "HWCC22",
-            "d": "CAR CASE HOT WHEELS VINTAGE",
-            "p": "INTEK ",
-            "pv": "27990.00",
-            "pm": "14200.00"
-        },
-        {
-            "c": "HWCC19",
-            "d": "HOT WHEELS CAR CASE C/AUTO ARMABLE",
-            "p": "INTEK ",
-            "pv": "44990.00",
-            "pm": "21500.00"
         },
         {
             "c": "HWCC18",
@@ -936,13 +943,6 @@
             "p": "WABRO",
             "pv": "79990.00",
             "pm": "34200.00"
-        },
-        {
-            "c": "99681",
-            "d": "CRY BABIES LOVING CARE",
-            "p": "WABRO",
-            "pv": "79990.00",
-            "pm": "35990.00"
         },
         {
             "c": "E7475",
