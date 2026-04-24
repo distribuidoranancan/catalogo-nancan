@@ -1,166 +1,340 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Distribuidora Nancan | Catálogo</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-color: #f4f7f6;
-            --primary: #00b894;
-            --text-dark: #2d3436;
-            --text-light: #636e72;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Nancan — Pedidos Mayoristas</title>
+  <link rel="icon" type="image/png" href="nancan_whatsapp.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #00b894; /* Verde profesional */
+      --secondary: #00cec9;
+      --dark: #1e272e;
+      --bg: #f5f7fa;
+      --white: #ffffff;
+      --whatsapp: #25D366;
+      --text-main: #2d3436;
+      --text-muted: #636e72;
+      --radius: 14px;
+      --shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: 15px;
-        }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body { 
+      font-family: 'Inter', sans-serif; 
+      background: var(--bg); 
+      color: var(--text-main); 
+      padding-bottom: 120px; 
+      -webkit-tap-highlight-color: transparent; 
+    }
 
-        /* Contenedor Principal */
-        .catalog-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-            gap: 15px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
+    /* HEADER PROFESIONAL */
+    header { 
+      background: var(--dark); 
+      color: white; 
+      padding: 1rem; 
+      position: sticky; 
+      top: 0; 
+      z-index: 1000; 
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+    }
+    .header-content { 
+      max-width: 800px; 
+      margin: 0 auto; 
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+    }
+    h1 { font-size: 1.1rem; letter-spacing: 0.5px; font-weight: 800; text-transform: uppercase; }
+    .product-count { 
+      background: var(--primary); 
+      padding: 5px 12px; 
+      border-radius: 20px; 
+      font-weight: 800; 
+      font-size: 0.75rem; 
+    }
 
-        /* Card Moderna */
-        .product-card {
-            background: white;
-            border-radius: 15px;
-            padding: 12px;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
-            border: 1px solid #edf2f7;
-            transition: transform 0.2s;
-        }
+    /* CONTROLES */
+    .controls { max-width: 800px; margin: 15px auto; padding: 0 15px; display: flex; flex-direction: column; gap: 10px; }
+    input, select { 
+      padding: 12px 18px; 
+      border: 1px solid #e1e8ed; 
+      border-radius: 12px; 
+      font-size: 16px; 
+      outline: none; 
+      background: var(--white); 
+      box-shadow: var(--shadow); 
+      width: 100%; 
+    }
 
-        .product-card:active { transform: scale(0.98); }
+    /* PRODUCTOS (CARDS) */
+    .products-container { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; padding: 0 15px; }
+    
+    .prod-card { 
+      background: var(--white); 
+      border-radius: var(--radius); 
+      padding: 12px; 
+      display: flex; 
+      align-items: center; 
+      gap: 15px; 
+      box-shadow: var(--shadow); 
+      transition: transform 0.2s; 
+      border: 2px solid transparent; 
+    }
+    .prod-card.in-cart { border-color: var(--primary); background: #f0fff4; }
+    
+    .prod-img { 
+      width: 90px; 
+      height: 90px; 
+      border-radius: 10px; 
+      object-fit: contain; 
+      background: #f8f9fa; 
+      cursor: zoom-in; 
+      flex-shrink: 0; 
+    }
 
-        .product-code {
-            font-size: 0.65rem;
-            color: #a0aec0;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
+    .prod-info { flex: 1; min-width: 0; }
+    .p-code { font-size: 0.65rem; color: var(--text-muted); font-weight: 700; background: #f1f3f5; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-bottom: 4px; }
+    .p-name { font-weight: 700; font-size: 0.95rem; line-height: 1.3; color: var(--dark); margin-bottom: 4px; }
+    
+    .tag-prov { 
+      font-size: 0.65rem; 
+      background: #eef2ff; 
+      color: #4338ca; 
+      padding: 2px 6px; 
+      border-radius: 4px; 
+      font-weight: 800; 
+      width: fit-content;
+    }
 
-        .img-container {
-            width: 100%;
-            height: 130px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 10px;
-        }
+    .price-area { margin-top: 8px; }
+    .price-main { color: var(--primary); font-weight: 800; font-size: 1.2rem; display: flex; align-items: baseline; gap: 4px; }
+    .price-label { font-size: 0.6rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; }
+    .price-sug { font-size: 0.8rem; color: #95a5a6; margin-top: 2px; }
 
-        .img-container img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-        }
+    /* CONTROLES DE CANTIDAD */
+    .qty-control { 
+      display: flex; 
+      flex-direction: column; 
+      align-items: center; 
+      background: #f1f3f5; 
+      border-radius: 10px; 
+      padding: 5px; 
+      gap: 2px; 
+    }
+    .qty-btn { 
+      width: 34px; 
+      height: 34px; 
+      border-radius: 8px; 
+      border: none; 
+      background: var(--white); 
+      font-weight: 800; 
+      cursor: pointer; 
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
+      font-size: 1.2rem; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center;
+      color: var(--primary);
+    }
+    .qty-num { font-weight: 800; font-size: 1.1rem; color: var(--dark); min-width: 25px; text-align: center; }
 
-        .product-name {
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--text-dark);
-            height: 2.5em;
-            overflow: hidden;
-            margin: 5px 0;
-        }
+    /* FOOTER */
+    footer { 
+      position: fixed; 
+      bottom: 15px; 
+      left: 15px; 
+      right: 15px; 
+      background: var(--dark); 
+      color: white; 
+      border-radius: 18px; 
+      padding: 15px 20px; 
+      z-index: 1000; 
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2); 
+    }
+    .footer-flex { max-width: 800px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .total-val { font-size: 1.4rem; font-weight: 800; color: #fff; }
+    .btn-order { 
+      background: var(--whatsapp); 
+      color: white; 
+      border: none; 
+      padding: 12px 22px; 
+      border-radius: 10px; 
+      font-weight: 800; 
+      cursor: pointer; 
+      font-size: 0.85rem; 
+      text-transform: uppercase; 
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
 
-        .product-price {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-top: auto;
-        }
-
-        .iva-tag {
-            font-size: 0.65rem;
-            color: var(--text-light);
-            display: block;
-            font-weight: normal;
-        }
-
-        .btn-add {
-            background: var(--primary);
-            color: white;
-            border: none;
-            padding: 8px;
-            border-radius: 8px;
-            margin-top: 10px;
-            font-weight: 600;
-            cursor: pointer;
-        }
-
-        /* Responsive para celulares */
-        @media (max-width: 480px) {
-            .catalog-container { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-        }
-    </style>
+    /* MODAL */
+    .modal { display: none; position: fixed; z-index: 2000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); backdrop-filter: blur(5px); align-items: center; justify-content: center; }
+    .modal img { max-width: 90%; max-height: 80%; border-radius: 12px; box-shadow: 0 0 30px rgba(0,0,0,0.5); }
+  </style>
 </head>
 <body>
 
-    <div class="catalog-container" id="lista-productos">
-        </div>
+<header>
+  <div class="header-content">
+    <h1>DISTRIBUIDORA NANCAN</h1>
+    <div class="product-count" id="countBadge">0 Items</div>
+  </div>
+</header>
+
+<div class="controls">
+  <input type="text" id="q" placeholder="Buscar producto o código..." oninput="updateList()">
+  <select id="f" onchange="updateList()">
+    <option value="">Todos los Proveedores</option>
+  </select>
+</div>
+
+<div id="list" class="products-container">
+  <p style="text-align: center; padding: 20px; color: var(--text-muted);">Cargando catálogo...</p>
+</div>
+
+<div id="imgModal" class="modal" onclick="this.style.display='none'">
+  <img id="modalImg">
+</div>
+
+<footer>
+  <div class="footer-flex">
+    <div>
+      <div style="font-size:0.65rem; color:#bdc3c7; font-weight:600; text-transform:uppercase; letter-spacing:0.5px;">Total Pedido</div>
+      <div class="total-val" id="total">$ 0</div>
+    </div>
+    <button class="btn-order" onclick="send()">
+      <span>Enviar Pedido</span>
+    </button>
+  </div>
+</footer>
+
 <script>
-    // 1. Datos de prueba por si el JSON falla (asegurate que los nombres coincidan con tu excel/json)
-    const productosPrueba = [
-        { "codigo": "BBCR6", "nombre": "Producto de Prueba", "precio": "1500", "imagen": "https://via.placeholder.com/150" }
-    ];
+// TU LÓGICA ORIGINAL (Mantenida intacta)
+let db = [];
+let dbIndex = {};
+let cart = JSON.parse(localStorage.getItem("nancan_cart")) || {};
+let debounceTimer;
 
-    async function cargarProductos() {
-        const contenedor = document.getElementById('lista-productos');
+async function init() {
+    try {
+        const response = await fetch('productos.json');
+        if (!response.ok) throw new Error("No se encontró el archivo productos.json");
         
-        try {
-            // Intentamos cargar tu archivo real
-            const response = await fetch('productos.json'); 
-            
-            if (!response.ok) {
-                throw new Error("No se pudo encontrar el archivo productos.json");
-            }
+        db = await response.json();
+        dbIndex = Object.fromEntries(db.map(x => [x.c, x]));
 
-            const productos = await response.json();
-            renderizar(productos);
+        const provs = [...new Set(db.map(x => x.p))].sort();
+        const select = document.getElementById('f');
+        provs.forEach(p => {
+            const o = document.createElement('option');
+            o.value = p; o.textContent = p;
+            select.appendChild(o);
+        });
 
-        } catch (error) {
-            console.error("Error cargando el JSON real, usando prueba:", error);
-            // Si falla el archivo, cargamos el de prueba para ver si el diseño funciona
-            renderizar(productosPrueba);
-            contenedor.innerHTML += `<p style="color:red; text-align:center; width:100%">Aviso: No se encontró 'productos.json'. Revisa el nombre del archivo en GitHub.</p>`;
-        }
+        updateList();
+        calc();
+    } catch (error) {
+        console.error("Error cargando base de datos:", error);
+        document.getElementById('list').innerHTML = `<p style="text-align:center; color:red; padding:20px;">Error al cargar productos. Revisa el archivo productos.json</p>`;
     }
+}
 
-    function renderizar(lista) {
-        const contenedor = document.getElementById('lista-productos');
-        contenedor.innerHTML = lista.map(p => `
-            <div class="product-card">
-                <span class="product-code">COD: ${p.codigo || 'S/C'}</span>
-                <div class="img-container">
-                    <img src="${p.imagen}" alt="${p.nombre}" onerror="this.src='https://via.placeholder.com/150?text=Sin+Imagen'">
-                </div>
-                <div class="product-name">${p.nombre}</div>
-                <div class="product-price">
-                    $${p.precio}
-                    <span class="iva-tag">precio sin IVA</span>
-                </div>
-                <button class="btn-add" onclick="agregarAlCarrito('${p.codigo}')">Agregar</button>
-            </div>
-        `).join('');
-    }
+function updateList() {
+  clearTimeout(debounceTimer);
+  debounceTimer = setTimeout(() => {
+    const q = document.getElementById('q').value.toLowerCase().trim();
+    const f = document.getElementById('f').value;
+    const list = document.getElementById('list');
+    
+    const filtered = db.filter(x => {
+      const matchQ = x.d.toLowerCase().includes(q) || x.c.toLowerCase().includes(q);
+      const matchF = !f || x.p === f;
+      return matchQ && matchF;
+    });
 
-    function agregarAlCarrito(codigo) {
-        alert("Agregado: " + codigo);
-    }
+    const fragment = document.createDocumentFragment();
+    filtered.forEach(x => {
+      const n = cart[x.c] || 0;
+      const card = document.createElement('div');
+      card.className = `prod-card ${n > 0 ? 'in-cart' : ''}`;
+      const fotoUrl = `fotos/${x.c}.jpg`;
+      
+      card.innerHTML = `
+        <img src="${fotoUrl}" class="prod-img" onclick="event.stopPropagation(); openModal('${fotoUrl}')" 
+             onerror="this.src='https://placehold.co/150x150?text=📦'; this.onclick=null;">
+        <div class="prod-info">
+          <span class="p-code">#${x.c}</span>
+          <div class="p-name">${x.d}</div>
+          <div class="tag-prov">${x.p}</div>
+          <div class="price-area">
+            <div class="price-main">$${x.pm.toLocaleString()} <span class="price-label">sin IVA</span></div>
+            <div class="price-sug">Sugerido: <strong>$${x.pv.toLocaleString()}</strong></div>
+          </div>
+        </div>
+        <div class="qty-control">
+          <button class="qty-btn" onclick="change('${x.c}', 1)">+</button>
+          <span class="qty-num" id="n-${x.c}">${n}</span>
+          <button class="qty-btn" onclick="change('${x.c}', -1)">−</button>
+        </div>
+      `;
+      fragment.appendChild(card);
+    });
+    list.innerHTML = filtered.length ? '' : '<p style="text-align:center; padding:40px; color:gray;">No se encontraron productos.</p>';
+    list.appendChild(fragment);
+  }, 100);
+}
 
-    // Ejecutar al cargar la página
-    document.addEventListener('DOMContentLoaded', cargarProductos);
+function openModal(src) {
+  const modal = document.getElementById("imgModal");
+  const modalImg = document.getElementById("modalImg");
+  modal.style.display = "flex";
+  modalImg.src = src;
+}
+
+function change(c, d) {
+  cart[c] = (cart[c] || 0) + d;
+  if (cart[c] <= 0) delete cart[c];
+  const el = document.getElementById(`n-${c}`);
+  if (el) {
+    el.textContent = cart[c] || 0;
+    const card = el.closest('.prod-card');
+    if (cart[c] > 0) card.classList.add('in-cart');
+    else card.classList.remove('in-cart');
+  }
+  localStorage.setItem("nancan_cart", JSON.stringify(cart));
+  calc();
+}
+
+function calc() {
+  let t = 0, items = 0;
+  for (let c in cart) {
+    const x = dbIndex[c];
+    if (x) { t += x.pm * cart[c]; items += cart[c]; }
+  }
+  document.getElementById('total').textContent = `$ ${t.toLocaleString()}`;
+  document.getElementById('countBadge').textContent = `${items} Items`;
+}
+
+function send() {
+  const keys = Object.keys(cart);
+  if (keys.length === 0) return alert("Seleccioná productos primero.");
+  let m = "🧾 *PEDIDO MAYORISTA - NANCAN*\n\n";
+  let cash = 0;
+  keys.forEach(c => {
+    const x = dbIndex[c];
+    const sub = x.pm * cart[c];
+    m += `• *${x.d}* [${c}]\n    Cant: ${cart[c]} | Sub: $${sub.toLocaleString()}\n\n`;
+    cash += sub;
+  });
+  m += `━━━━━━━━━━━━━━\n*TOTAL PEDIDO: $${cash.toLocaleString()}*`;
+  window.open(`https://wa.me/5492235527149?text=${encodeURIComponent(m)}`);
+}
+
+init();
 </script>
 </body>
 </html>
