@@ -5,7 +5,7 @@
     "p": "WABRO",
     "pv": "99990.00",
     "pm": "52900.00",
-    "oferta": false
+    "oferta": true
   },
   {
     "c": "99681",
@@ -13,7 +13,7 @@
     "p": "WABRO",
     "pv": "79990.00",
     "pm": "35990.00",
-    "oferta": false
+    "oferta": true
   },
   {
     "c": "BBCR6",
@@ -21,7 +21,7 @@
     "p": "INTEK ",
     "pv": "79990.00",
     "pm": "34990.00",
-    "oferta": false
+    "oferta": true
   },
   {
     "c": "HWCC19",
@@ -29,7 +29,7 @@
     "p": "INTEK ",
     "pv": "44990.00",
     "pm": "21500.00",
-    "oferta": false
+    "oferta": true
   },
   {
     "c": "HWCC22",
@@ -373,7 +373,7 @@
     "p": "INTEK ",
     "pv": "25990.00",
     "pm": "14200.00",
-    "oferta": false
+    "oferta": true
   },
   {
     "c": "HWCC2",
@@ -565,7 +565,7 @@
     "p": "SEBIGUS",
     "pv": "4500.00",
     "pm": "1890.00",
-    "oferta": false
+    "oferta": true
   },
   {
     "c": "52255",
