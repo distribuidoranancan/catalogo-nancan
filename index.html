@@ -109,40 +109,58 @@
 
     <div class="catalog-container" id="lista-productos">
         </div>
+<script>
+    // 1. Datos de prueba por si el JSON falla (asegurate que los nombres coincidan con tu excel/json)
+    const productosPrueba = [
+        { "codigo": "BBCR6", "nombre": "Producto de Prueba", "precio": "1500", "imagen": "https://via.placeholder.com/150" }
+    ];
 
-    <script>
-        // Función para cargar tus 227 productos
-        async function cargarProductos() {
-            try {
-                const response = await fetch('productos.json');
-                const productos = await response.json();
-                const contenedor = document.getElementById('lista-productos');
-                
-                contenedor.innerHTML = productos.map(p => `
-                    <div class="product-card">
-                        <span class="product-code">COD: ${p.codigo || 'S/C'}</span>
-                        <div class="img-container">
-                            <img src="${p.imagen}" alt="${p.nombre}" onerror="this.src='https://via.placeholder.com/150?text=Sin+Imagen'">
-                        </div>
-                        <div class="product-name">${p.nombre}</div>
-                        <div class="product-price">
-                            $${p.precio}
-                            <span class="iva-tag">precio sin IVA</span>
-                        </div>
-                        <button class="btn-add" onclick="agregarAlCarrito('${p.codigo}')">Agregar</button>
-                    </div>
-                `).join('');
-            } catch (error) {
-                console.error("Error cargando productos:", error);
+    async function cargarProductos() {
+        const contenedor = document.getElementById('lista-productos');
+        
+        try {
+            // Intentamos cargar tu archivo real
+            const response = await fetch('productos.json'); 
+            
+            if (!response.ok) {
+                throw new Error("No se pudo encontrar el archivo productos.json");
             }
-        }
 
-        function agregarAlCarrito(codigo) {
-            console.log("Producto agregado:", codigo);
-            // Aquí va tu lógica de carrito que ya tenías
-        }
+            const productos = await response.json();
+            renderizar(productos);
 
-        window.onload = cargarProductos;
-    </script>
+        } catch (error) {
+            console.error("Error cargando el JSON real, usando prueba:", error);
+            // Si falla el archivo, cargamos el de prueba para ver si el diseño funciona
+            renderizar(productosPrueba);
+            contenedor.innerHTML += `<p style="color:red; text-align:center; width:100%">Aviso: No se encontró 'productos.json'. Revisa el nombre del archivo en GitHub.</p>`;
+        }
+    }
+
+    function renderizar(lista) {
+        const contenedor = document.getElementById('lista-productos');
+        contenedor.innerHTML = lista.map(p => `
+            <div class="product-card">
+                <span class="product-code">COD: ${p.codigo || 'S/C'}</span>
+                <div class="img-container">
+                    <img src="${p.imagen}" alt="${p.nombre}" onerror="this.src='https://via.placeholder.com/150?text=Sin+Imagen'">
+                </div>
+                <div class="product-name">${p.nombre}</div>
+                <div class="product-price">
+                    $${p.precio}
+                    <span class="iva-tag">precio sin IVA</span>
+                </div>
+                <button class="btn-add" onclick="agregarAlCarrito('${p.codigo}')">Agregar</button>
+            </div>
+        `).join('');
+    }
+
+    function agregarAlCarrito(codigo) {
+        alert("Agregado: " + codigo);
+    }
+
+    // Ejecutar al cargar la página
+    document.addEventListener('DOMContentLoaded', cargarProductos);
+</script>
 </body>
 </html>
