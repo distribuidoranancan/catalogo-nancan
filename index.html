@@ -21,45 +21,68 @@
     h1 { font-size: 1.1rem; letter-spacing: 0.5px; font-weight: 800; text-transform: uppercase; }
     .product-count { background: var(--primary); padding: 5px 12px; border-radius: 20px; font-weight: 800; font-size: 0.75rem; }
 
-    /* CARRUSEL REFORZADO - 2 RENGLONES GARANTIZADOS */
+    /* CARRUSEL — ARREGLO DEFINITIVO DE ANCHO */
     .carousel-container { display: none; max-width: 800px; margin: 15px auto; padding: 0 15px; width: 100%; }
     .carousel-title { font-size: 0.75rem; font-weight: 800; color: #e17055; text-transform: uppercase; margin-bottom: 8px; display: flex; align-items: center; gap: 5px; }
-    .carousel-viewport { overflow: hidden; border-radius: var(--radius); background: var(--white); box-shadow: var(--shadow); border: 1px solid #ffeaa7; position: relative; }
-    .carousel-track { display: flex; transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1); width: 100%; }
+    .carousel-viewport { 
+        overflow: hidden; 
+        border-radius: var(--radius); 
+        background: var(--white); 
+        box-shadow: var(--shadow); 
+        border: 1px solid #ffeaa7; 
+        position: relative; 
+        width: 100%;
+    }
+    .carousel-track { 
+        display: flex; 
+        transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1); 
+        width: 100%; 
+    }
     
     .carousel-item { 
-      min-width: 100%; 
+      min-width: 100%; /* Obliga a que cada card ocupe exactamente el ancho del visor */
+      max-width: 100%; /* Evita que el texto largo la ensanche */
       min-height: 110px; 
       padding: 12px; 
       display: flex; 
       align-items: center; 
       gap: 12px; 
-      flex-shrink: 0; 
+      flex-shrink: 0; /* Evita que la tarjeta se achique o se estire */
+      overflow: hidden; /* Corta cualquier desborde */
     }
+
     .carousel-item img { 
-      width: 75px; 
-      height: 75px; 
+      width: 70px; 
+      height: 70px; 
       object-fit: contain; 
       border-radius: 8px; 
       background: #fffcf0; 
       flex-shrink: 0;
     }
-    .c-info { min-width: 0; flex: 1; padding-right: 5px; }
+
+    .c-info { 
+        flex: 1; 
+        min-width: 0; /* ESTO ES CLAVE: permite que el texto se rompa en vez de empujar la card */
+        overflow: hidden;
+    }
+
     .c-info h3 { 
-      font-size: 0.9rem; 
+      font-size: 0.88rem; 
       font-weight: 700; 
       color: var(--dark); 
       line-height: 1.25;
       margin-bottom: 4px;
+      /* Limitamos a 2 renglones y cortamos con puntos suspensivos */
       display: -webkit-box !important;
       -webkit-line-clamp: 2 !important;
       -webkit-box-orient: vertical !important;
       overflow: hidden;
-      text-overflow: ellipsis;
       white-space: normal; 
     }
+
     .c-tag { background: #ffeaa7; color: #d63031; font-size: 0.6rem; font-weight: 800; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-bottom: 4px; }
 
+    /* ESTILOS DEL RESTO DEL CATÁLOGO */
     .controls { max-width: 800px; margin: 15px auto; padding: 0 15px; display: flex; flex-direction: column; gap: 10px; }
     input, select { padding: 12px 18px; border: 1px solid #e1e8ed; border-radius: 12px; font-size: 16px; outline: none; background: var(--white); box-shadow: var(--shadow); width: 100%; }
 
@@ -167,7 +190,8 @@ function renderCarousel() {
     const track = document.getElementById('carouselTrack');
     const wrapper = document.getElementById('carouselWrapper');
     
-    const ofertas = db.filter(x => x.oferta === true || x.oferta === "true");
+    // Mejoramos el filtro para mayor compatibilidad con el JSON
+    const ofertas = db.filter(x => x.oferta === true || x.oferta === "true" || String(x.oferta).toUpperCase() === "SI");
 
     if (!ofertas || ofertas.length === 0) {
         wrapper.style.display = 'none';
@@ -181,15 +205,21 @@ function renderCarousel() {
             <div class="c-info">
                 <span class="c-tag">PRECIO ESPECIAL</span>
                 <h3>${x.d}</h3>
-                <div style="color:var(--primary); font-weight:800;">$${x.pm.toLocaleString()} <span style="font-size:0.6rem; color:gray">sin IVA</span></div>
+                <div style="color:var(--primary); font-weight:800; font-size:1.1rem;">
+                    $${x.pm.toLocaleString()} <span style="font-size:0.6rem; color:gray; font-weight:400;">sin IVA</span>
+                </div>
             </div>
         </div>
     `).join('');
 
+    // Ajuste de ancho del track para manejar el desplazamiento
+    track.style.width = `${ofertas.length * 100}%`;
+
     if (window.carouselInterval) clearInterval(window.carouselInterval);
     window.carouselInterval = setInterval(() => {
         currentSlide = (currentSlide + 1) % ofertas.length;
-        track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        // El desplazamiento debe ser proporcional al número de ofertas
+        track.style.transform = `translateX(-${(currentSlide * 100) / ofertas.length}%)`;
     }, 5000);
 }
 
@@ -201,8 +231,8 @@ function updateList() {
     const list = document.getElementById('list');
     
     const filtered = db.filter(x => {
-      const dSafe = x.d ? x.d.toLowerCase() : "";
-      const cSafe = x.c ? x.c.toLowerCase() : "";
+      const dSafe = (x.d || "").toLowerCase();
+      const cSafe = (x.c || "").toLowerCase();
       const matchQ = dSafe.includes(q) || cSafe.includes(q);
       const matchF = !f || x.p === f;
       return matchQ && matchF;
@@ -213,80 +243,4 @@ function updateList() {
       const n = cart[x.c] || 0;
       const card = document.createElement('div');
       card.className = `prod-card ${n > 0 ? 'in-cart' : ''}`;
-      const fotoUrl = `fotos/${x.c}.jpg`;
-      
-      card.innerHTML = `
-        <img src="${fotoUrl}" class="prod-img" onclick="event.stopPropagation(); openModal('${fotoUrl}')" 
-             onerror="this.src='https://placehold.co/150x150?text=📦'; this.onclick=null;">
-        <div class="prod-info">
-          <span class="p-code">#${x.c}</span>
-          <div class="p-name">${x.d}</div>
-          <div class="tag-prov">${x.p}</div>
-          <div class="price-area">
-            <div class="price-main">$${x.pm.toLocaleString()} <span class="price-label">sin IVA</span></div>
-            <div class="price-sug">Sugerido: <strong>$${x.pv.toLocaleString()}</strong></div>
-          </div>
-        </div>
-        <div class="qty-control">
-          <button class="qty-btn" onclick="change('${x.c}', 1)">+</button>
-          <span class="qty-num" id="n-${x.c}">${n}</span>
-          <button class="qty-btn" onclick="change('${x.c}', -1)">−</button>
-        </div>
-      `;
-      fragment.appendChild(card);
-    });
-    list.innerHTML = filtered.length ? '' : '<p style="text-align:center; padding:40px; color:gray;">No se encontraron productos.</p>';
-    list.appendChild(fragment);
-  }, 100);
-}
-
-function openModal(src) {
-  const modal = document.getElementById("imgModal");
-  const modalImg = document.getElementById("modalImg");
-  modal.style.display = "flex";
-  modalImg.src = src;
-}
-
-function change(c, d) {
-  cart[c] = (cart[c] || 0) + d;
-  if (cart[c] <= 0) delete cart[c];
-  const el = document.getElementById(`n-${c}`);
-  if (el) {
-    el.textContent = cart[c] || 0;
-    const card = el.closest('.prod-card');
-    if (cart[c] > 0) card.classList.add('in-cart');
-    else card.classList.remove('in-cart');
-  }
-  localStorage.setItem("nancan_cart", JSON.stringify(cart));
-  calc();
-}
-
-function calc() {
-  let t = 0, items = 0;
-  for (let c in cart) {
-    const x = dbIndex[c];
-    if (x) { t += x.pm * cart[c]; items += cart[c]; }
-  }
-  document.getElementById('total').textContent = `$ ${t.toLocaleString()}`;
-  document.getElementById('countBadge').textContent = `${items} Items`;
-}
-
-function send() {
-  const keys = Object.keys(cart);
-  if (keys.length === 0) return alert("Seleccioná productos primero.");
-  let m = "🧾 *PEDIDO MAYORISTA - NANCAN*\n\n";
-  let cash = 0;
-  keys.forEach(c => {
-    const x = dbIndex[c];
-    const sub = x.pm * cart[c];
-    m += `• *${x.d}* [${c}]\n    Cant: ${cart[c]} | Sub: $${sub.toLocaleString()}\n\n`;
-    cash += sub;
-  });
-  m += `━━━━━━━━━━━━━━\n*TOTAL PEDIDO: $${cash.toLocaleString()}*`;
-  window.open(`https://wa.me/5492235527149?text=${encodeURIComponent(m)}`);
-}
-
-document.addEventListener('DOMContentLoaded', init);
-</script>
-</body>
-</html>
+      const fotoUrl = `fotos/${x.
