@@ -21,7 +21,7 @@
     h1 { font-size: 1.1rem; letter-spacing: 0.5px; font-weight: 800; text-transform: uppercase; }
     .product-count { background: var(--primary); padding: 5px 12px; border-radius: 20px; font-weight: 800; font-size: 0.75rem; }
 
-    /* CARRUSEL — ARREGLO DEFINITIVO DE ANCHO */
+    /* CARRUSEL — ESTRUCTURA CORREGIDA */
     .carousel-container { display: none; max-width: 800px; margin: 15px auto; padding: 0 15px; width: 100%; }
     .carousel-title { font-size: 0.75rem; font-weight: 800; color: #e17055; text-transform: uppercase; margin-bottom: 8px; display: flex; align-items: center; gap: 5px; }
     .carousel-viewport { 
@@ -31,26 +31,23 @@
         box-shadow: var(--shadow); 
         border: 1px solid #ffeaa7; 
         position: relative; 
-        width: 100%;
     }
     .carousel-track { 
         display: flex; 
         transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1); 
-        width: 100%; 
+        /* El ancho se asigna dinámicamente por JS */
     }
     
     .carousel-item { 
-      min-width: 100%; /* Obliga a que cada card ocupe exactamente el ancho del visor */
-      max-width: 100%; /* Evita que el texto largo la ensanche */
+      min-width: 100%; /* Ocupa exactamente el viewport */
       min-height: 110px; 
       padding: 12px; 
       display: flex; 
       align-items: center; 
       gap: 12px; 
-      flex-shrink: 0; /* Evita que la tarjeta se achique o se estire */
-      overflow: hidden; /* Corta cualquier desborde */
+      flex-shrink: 0; 
+      overflow: hidden; 
     }
-
     .carousel-item img { 
       width: 70px; 
       height: 70px; 
@@ -59,30 +56,22 @@
       background: #fffcf0; 
       flex-shrink: 0;
     }
-
-    .c-info { 
-        flex: 1; 
-        min-width: 0; /* ESTO ES CLAVE: permite que el texto se rompa en vez de empujar la card */
-        overflow: hidden;
-    }
-
+    .c-info { flex: 1; min-width: 0; overflow: hidden; }
     .c-info h3 { 
       font-size: 0.88rem; 
       font-weight: 700; 
       color: var(--dark); 
       line-height: 1.25;
       margin-bottom: 4px;
-      /* Limitamos a 2 renglones y cortamos con puntos suspensivos */
       display: -webkit-box !important;
       -webkit-line-clamp: 2 !important;
       -webkit-box-orient: vertical !important;
       overflow: hidden;
       white-space: normal; 
     }
-
     .c-tag { background: #ffeaa7; color: #d63031; font-size: 0.6rem; font-weight: 800; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-bottom: 4px; }
 
-    /* ESTILOS DEL RESTO DEL CATÁLOGO */
+    /* CATALOGO */
     .controls { max-width: 800px; margin: 15px auto; padding: 0 15px; display: flex; flex-direction: column; gap: 10px; }
     input, select { padding: 12px 18px; border: 1px solid #e1e8ed; border-radius: 12px; font-size: 16px; outline: none; background: var(--white); box-shadow: var(--shadow); width: 100%; }
 
@@ -166,7 +155,6 @@ async function init() {
     try {
         const response = await fetch('productos.json');
         if (!response.ok) throw new Error("No se encontró el archivo productos.json");
-        
         db = await response.json();
         dbIndex = Object.fromEntries(db.map(x => [x.c, x]));
 
@@ -189,8 +177,6 @@ async function init() {
 function renderCarousel() {
     const track = document.getElementById('carouselTrack');
     const wrapper = document.getElementById('carouselWrapper');
-    
-    // Mejoramos el filtro para mayor compatibilidad con el JSON
     const ofertas = db.filter(x => x.oferta === true || x.oferta === "true" || String(x.oferta).toUpperCase() === "SI");
 
     if (!ofertas || ofertas.length === 0) {
@@ -199,6 +185,9 @@ function renderCarousel() {
     }
 
     wrapper.style.display = 'block';
+    // Importante: El track mide 100% * cantidad de items
+    track.style.width = `${ofertas.length * 100}%`;
+
     track.innerHTML = ofertas.map(x => `
         <div class="carousel-item">
             <img src="fotos/${x.c}.jpg" onerror="this.src='https://placehold.co/100x100?text=OFERTA'">
@@ -212,14 +201,12 @@ function renderCarousel() {
         </div>
     `).join('');
 
-    // Ajuste de ancho del track para manejar el desplazamiento
-    track.style.width = `${ofertas.length * 100}%`;
-
     if (window.carouselInterval) clearInterval(window.carouselInterval);
     window.carouselInterval = setInterval(() => {
         currentSlide = (currentSlide + 1) % ofertas.length;
-        // El desplazamiento debe ser proporcional al número de ofertas
-        track.style.transform = `translateX(-${(currentSlide * 100) / ofertas.length}%)`;
+        // El porcentaje de movimiento es relativo al ancho total del track
+        const move = (currentSlide * 100) / ofertas.length;
+        track.style.transform = `translateX(-${move}%)`;
     }, 5000);
 }
 
