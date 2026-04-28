@@ -243,4 +243,80 @@ function updateList() {
       const n = cart[x.c] || 0;
       const card = document.createElement('div');
       card.className = `prod-card ${n > 0 ? 'in-cart' : ''}`;
-      const fotoUrl = `fotos/${x.
+      const fotoUrl = `fotos/${x.c}.jpg`;
+      
+      card.innerHTML = `
+        <img src="${fotoUrl}" class="prod-img" onclick="event.stopPropagation(); openModal('${fotoUrl}')" 
+             onerror="this.src='https://placehold.co/150x150?text=📦'; this.onclick=null;">
+        <div class="prod-info">
+          <span class="p-code">#${x.c}</span>
+          <div class="p-name">${x.d}</div>
+          <div class="tag-prov">${x.p}</div>
+          <div class="price-area">
+            <div class="price-main">$${x.pm.toLocaleString()} <span class="price-label">sin IVA</span></div>
+            <div class="price-sug">Sugerido: <strong>$${x.pv.toLocaleString()}</strong></div>
+          </div>
+        </div>
+        <div class="qty-control">
+          <button class="qty-btn" onclick="change('${x.c}', 1)">+</button>
+          <span class="qty-num" id="n-${x.c}">${n}</span>
+          <button class="qty-btn" onclick="change('${x.c}', -1)">−</button>
+        </div>
+      `;
+      fragment.appendChild(card);
+    });
+    list.innerHTML = filtered.length ? '' : '<p style="text-align:center; padding:40px; color:gray;">No se encontraron productos.</p>';
+    list.appendChild(fragment);
+  }, 100);
+}
+
+function openModal(src) {
+  const modal = document.getElementById("imgModal");
+  const modalImg = document.getElementById("modalImg");
+  modal.style.display = "flex";
+  modalImg.src = src;
+}
+
+function change(c, d) {
+  cart[c] = (cart[c] || 0) + d;
+  if (cart[c] <= 0) delete cart[c];
+  const el = document.getElementById(`n-${c}`);
+  if (el) {
+    el.textContent = cart[c] || 0;
+    const card = el.closest('.prod-card');
+    if (cart[c] > 0) card.classList.add('in-cart');
+    else card.classList.remove('in-cart');
+  }
+  localStorage.setItem("nancan_cart", JSON.stringify(cart));
+  calc();
+}
+
+function calc() {
+  let t = 0, items = 0;
+  for (let c in cart) {
+    const x = dbIndex[c];
+    if (x) { t += x.pm * cart[c]; items += cart[c]; }
+  }
+  document.getElementById('total').textContent = `$ ${t.toLocaleString()}`;
+  document.getElementById('countBadge').textContent = `${items} Items`;
+}
+
+function send() {
+  const keys = Object.keys(cart);
+  if (keys.length === 0) return alert("Seleccioná productos primero.");
+  let m = "🧾 *PEDIDO MAYORISTA - NANCAN*\n\n";
+  let cash = 0;
+  keys.forEach(c => {
+    const x = dbIndex[c];
+    const sub = x.pm * cart[c];
+    m += `• *${x.d}* [${c}]\n    Cant: ${cart[c]} | Sub: $${sub.toLocaleString()}\n\n`;
+    cash += sub;
+  });
+  m += `━━━━━━━━━━━━━━\n*TOTAL PEDIDO: $${cash.toLocaleString()}*`;
+  window.open(`https://wa.me/5492235527149?text=${encodeURIComponent(m)}`);
+}
+
+document.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>
