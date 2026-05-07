@@ -16,16 +16,11 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text-main); padding-bottom: 120px; }
 
-    /* --- HEADER MEJORADO --- */
+    /* --- HEADER --- */
     header { 
         background: linear-gradient(135deg, #1e272e 0%, #2d3436 100%); 
-        color: white; 
-        padding: 12px 15px; 
-        position: sticky; 
-        top: 0; 
-        z-index: 1000; 
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15); 
-        border-bottom: 3px solid var(--primary);
+        color: white; padding: 12px 15px; position: sticky; top: 0; z-index: 1000; 
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-bottom: 3px solid var(--primary);
     }
     .header-content { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 5px; }
     .header-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
@@ -36,10 +31,26 @@
     .product-count { background: var(--primary); padding: 5px 12px; border-radius: 20px; font-weight: 800; font-size: 0.75rem; color: white; }
     .badge-pill { background: rgba(255,255,255,0.1); padding: 4px 10px; border-radius: 20px; font-size: 0.65rem; border: 1px solid rgba(255,255,255,0.2); display: flex; align-items: center; gap: 5px; }
 
+    /* --- BOTONES FLOTANTES --- */
+    .btn-wsp-flotante {
+        position: fixed; width: 55px; height: 55px; bottom: 85px; right: 20px;
+        background-color: var(--whatsapp); color: #FFF; border-radius: 50px;
+        text-align: center; font-size: 30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+        z-index: 998; display: flex; align-items: center; justify-content: center;
+        text-decoration: none; transition: transform 0.3s;
+    }
+    .btn-wsp-flotante:active { transform: scale(0.9); }
+    .btn-wsp-flotante::before {
+        content: "Consultas"; position: absolute; right: 65px; background: white;
+        color: #333; font-size: 11px; font-weight: 700; padding: 4px 8px;
+        border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); pointer-events: none;
+    }
+    .btn-top { position: fixed; bottom: 150px; right: 20px; background: var(--dark); color: white; width: 45px; height: 45px; border-radius: 50%; display: none; align-items: center; justify-content: center; border: none; z-index: 997; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+
     /* --- CARRUSEL --- */
     .carousel-container { display: none; max-width: 800px; margin: 15px auto; padding: 0 15px; width: 100%; }
     .carousel-title { font-size: 0.75rem; font-weight: 800; color: #e17055; text-transform: uppercase; margin-bottom: 8px; display: flex; align-items: center; gap: 5px; }
-    .carousel-viewport { overflow: hidden; border-radius: var(--radius); background: var(--white); box-shadow: var(--shadow); border: 1px solid #ffeaa7; position: relative; cursor: pointer; }
+    .carousel-viewport { overflow: hidden; border-radius: var(--radius); background: var(--white); box-shadow: var(--shadow); border: 1px solid #ffeaa7; position: relative; }
     .carousel-track { display: flex; transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1); }
     .carousel-item { min-height: 110px; padding: 12px; display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
     .carousel-item img { width: 70px; height: 70px; object-fit: contain; border-radius: 8px; background: #fffcf0; }
@@ -50,7 +61,7 @@
     .carousel-dot { width: 6px; height: 6px; border-radius: 50%; background: #dfe6e9; transition: all 0.3s; }
     .carousel-dot.active { background: #e17055; transform: scale(1.3); }
 
-    /* --- CONTROLES Y PRODUCTOS --- */
+    /* --- PRODUCTOS --- */
     .controls { max-width: 800px; margin: 15px auto; padding: 0 15px; display: flex; flex-direction: column; gap: 10px; }
     input[type="text"], select { padding: 12px 18px; border: 1px solid #e1e8ed; border-radius: 12px; font-size: 16px; outline: none; background: var(--white); box-shadow: var(--shadow); width: 100%; }
     .products-container { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; padding: 0 15px; }
@@ -61,28 +72,21 @@
     .p-code { font-size: 0.65rem; color: var(--text-muted); font-weight: 700; background: #f1f3f5; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-bottom: 4px; }
     .p-name { font-weight: 700; font-size: 0.95rem; line-height: 1.3; color: var(--dark); margin-bottom: 4px; }
     .tag-prov { font-size: 0.65rem; background: #eef2ff; color: #4338ca; padding: 2px 6px; border-radius: 4px; font-weight: 800; width: fit-content; }
-    .price-area { margin-top: 8px; }
-    .price-main { color: var(--primary); font-weight: 800; font-size: 1.2rem; display: flex; align-items: baseline; gap: 4px; }
-    .price-label { font-size: 0.6rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; }
-    .price-sug { font-size: 0.8rem; color: #95a5a6; margin-top: 2px; }
+    .price-main { color: var(--primary); font-weight: 800; font-size: 1.15rem; display: flex; align-items: baseline; gap: 4px; }
     .qty-control { display: flex; flex-direction: column; align-items: center; background: #f1f3f5; border-radius: 10px; padding: 5px; gap: 2px; }
-    .qty-btn { width: 34px; height: 34px; border-radius: 8px; border: none; background: var(--white); font-weight: 800; cursor: pointer; font-size: 1.2rem; color: var(--primary); display: flex; align-items: center; justify-content: center; }
+    .qty-btn { width: 34px; height: 34px; border-radius: 8px; border: none; background: var(--white); font-weight: 800; cursor: pointer; color: var(--primary); display: flex; align-items: center; justify-content: center; }
     .qty-num { font-weight: 800; font-size: 1.1rem; color: var(--dark); min-width: 25px; text-align: center; }
 
-    /* --- FOOTER Y PRECIO FIX --- */
+    /* --- FOOTER --- */
     footer { position: fixed; bottom: 15px; left: 10px; right: 10px; background: var(--dark); color: white; border-radius: 18px; padding: 12px 15px; z-index: 1000; box-shadow: 0 10px 25px rgba(0,0,0,0.3); }
     .footer-flex { max-width: 800px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 8px; }
     .total-val { font-size: 1.25rem; font-weight: 800; white-space: nowrap; letter-spacing: -0.5px; }
     .btn-order { background: var(--whatsapp); color: white; border: none; padding: 10px 16px; border-radius: 10px; font-weight: 800; cursor: pointer; font-size: 0.8rem; text-transform: uppercase; white-space: nowrap; }
-    .btn-clear { background: transparent; color: #b2bec3; border: 1px solid #4a5568; padding: 10px 14px; border-radius: 10px; font-weight: 700; cursor: pointer; font-size: 0.75rem; }
 
-    /* --- MODALES Y VARIOS --- */
+    /* --- MODALES --- */
     .modal { display: none; position: fixed; z-index: 2000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); backdrop-filter: blur(5px); align-items: center; justify-content: center; }
-    .modal-content { background: var(--white); padding: 20px; border-radius: var(--radius); width: 90%; max-width: 400px; color: var(--text-main); }
+    .modal-content { background: var(--white); padding: 20px; border-radius: var(--radius); width: 90%; max-width: 400px; }
     .summary-item { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #eee; font-size: 0.9rem; }
-    .btn-top { position: fixed; bottom: 100px; right: 20px; background: var(--dark); color: white; width: 45px; height: 45px; border-radius: 50%; display: none; align-items: center; justify-content: center; border: none; z-index: 999; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-    .prod-card.highlight { animation: highlightPulse 1.5s ease-out; }
-    @keyframes highlightPulse { 0% { box-shadow: 0 0 0 0 rgba(0,184,148,0.5); } 50% { box-shadow: 0 0 0 8px rgba(0,184,148,0.2); } 100% { box-shadow: var(--shadow); } }
     
     @media (min-width: 600px) {
         .brand-logo { width: 55px; height: 55px; }
@@ -137,6 +141,12 @@
   </div>
 </div>
 
+<a href="https://wa.me/5492235527149?text=Hola!%20Tengo%20una%20consulta%20sobre%20el%20catálogo" 
+   class="btn-wsp-flotante" target="_blank">
+   <svg width="30" height="30" viewBox="0 0 24 24" fill="white">
+     <path d="M12.012 2c-5.508 0-9.987 4.479-9.987 9.987 0 1.758.459 3.411 1.264 4.847L2 22l5.303-1.391c1.393.759 2.977 1.19 4.661 1.19 5.508 0 10.012-4.479 10.012-9.987 0-5.508-4.504-9.987-10.012-9.987zm6.393 14.215c-.269.759-1.565 1.4-2.146 1.486-.53.079-1.22.14-3.561-.83-2.996-1.241-4.933-4.286-5.082-4.484-.149-.199-1.212-1.614-1.212-3.078 0-1.464.761-2.181 1.03-2.479.269-.297.581-.371.774-.371.194 0 .387.001.554.009.176.008.412-.066.645.512.234.579.799 1.95.869 2.089.07.139.116.302.023.487-.092.186-.14.302-.279.464-.139.163-.293.364-.419.488-.139.139-.285.291-.123.57.163.279.721 1.189 1.547 1.92.826.73 1.523.957 1.848 1.121.325.163.511.139.703-.075.192-.214.826-.957 1.047-1.284.22-.326.441-.271.743-.162.302.109 1.914.903 2.243 1.066.33.163.551.243.633.382.08.139.08.805-.189 1.564z"/>
+   </svg>
+</a>
 <button id="btnTop" class="btn-top" onclick="window.scrollTo({top:0, behavior:'smooth'})">⬆️</button>
 
 <footer>
@@ -170,7 +180,7 @@ async function init() {
 
 function renderCarousel() {
   const track = document.getElementById('carouselTrack'), wrapper = document.getElementById('carouselWrapper');
-  carouselOfertas = db.filter(x => x.oferta === true || x.oferta === "true" || String(x.oferta).toUpperCase() === "SI");
+  carouselOfertas = db.filter(x => String(x.oferta).toUpperCase() === "SI" || x.oferta === true);
   if (!carouselOfertas.length) return;
   wrapper.style.display = 'block';
   const n = carouselOfertas.length;
@@ -178,7 +188,7 @@ function renderCarousel() {
   track.innerHTML = carouselOfertas.map(x => `
     <div class="carousel-item" style="width:${100/n}%" onclick="scrollToProduct('${x.c}')">
       <img src="fotos/${x.c}.jpg" onerror="this.src='https://placehold.co/100x100?text=OFERTA'">
-      <div class="c-info"><span class="c-tag">PRECIO ESPECIAL</span><h3>${x.d}</h3><div style="color:var(--primary);font-weight:800;">$${x.pm.toLocaleString()}</div></div>
+      <div class="c-info"><span class="c-tag">OFERTA</span><h3>${x.d}</h3><div style="color:var(--primary);font-weight:800;">$${x.pm.toLocaleString()}</div></div>
     </div>`).join('');
   document.getElementById('carouselDots').innerHTML = carouselOfertas.map((_,i)=>`<div class="carousel-dot ${i===0?'active':''}" id="dot-${i}"></div>`).join('');
   setInterval(() => { currentSlide = (currentSlide + 1) % n; moveSlide(currentSlide); }, 5000);
@@ -186,8 +196,9 @@ function renderCarousel() {
 
 function moveSlide(i) {
   const n = carouselOfertas.length;
-  if(document.getElementById('carouselTrack')) {
-    document.getElementById('carouselTrack').style.transform = `translateX(-${(i/n)*100}%)`;
+  const track = document.getElementById('carouselTrack');
+  if(track) {
+    track.style.transform = `translateX(-${(i/n)*100}%)`;
     document.querySelectorAll('.carousel-dot').forEach((d,idx) => d.classList.toggle('active', idx === i));
   }
 }
@@ -202,8 +213,8 @@ function updateList() {
       <img src="fotos/${x.c}.jpg" class="prod-img" onclick="openModal('fotos/${x.c}.jpg')" onerror="this.src='https://placehold.co/150x150?text=📦'">
       <div class="prod-info">
         <span class="p-code">#${x.c}</span><div class="p-name">${x.d}</div><div class="tag-prov">${x.p}</div>
-        <div class="price-area"><div class="price-main">$${x.pm.toLocaleString()} <span class="price-label">sin IVA</span></div>
-        <div class="price-sug">Sugerido: <strong>$${x.pv.toLocaleString()}</strong></div></div>
+        <div class="price-main">$${x.pm.toLocaleString()} <span style="font-size:0.6rem; color:gray; font-weight:400; margin-left:4px;">sin IVA</span></div>
+        <div style="font-size:0.8rem; color:#95a5a6; margin-top:2px;">Sugerido: $${x.pv.toLocaleString()}</div>
       </div>
       <div class="qty-control">
         <button class="qty-btn" onclick="change('${x.c}',1)">+</button>
@@ -231,19 +242,19 @@ function calc() {
   document.getElementById('btnClear').style.display = n > 0 ? 'block' : 'none';
 }
 
-function clearCart() { if(confirm("¿Vaciar el carrito?")){ cart={}; localStorage.removeItem("nancan_cart"); updateList(); calc(); } }
+function clearCart() { if(confirm("¿Vaciar el pedido actual?")){ cart={}; localStorage.removeItem("nancan_cart"); updateList(); calc(); } }
 
 function send() {
   const keys = Object.keys(cart);
-  if (!keys.length) return alert("Seleccioná productos primero.");
+  if (!keys.length) return alert("El carrito está vacío.");
   let html = "", total = 0;
   keys.forEach(c => { const x = dbIndex[c]; const sub = x.pm * cart[c]; total += sub; html += `<div class="summary-item"><span>${cart[c]}x ${x.d}</span><strong>$${sub.toLocaleString()}</strong></div>`; });
   document.getElementById('summaryList').innerHTML = html + `<div class="summary-item" style="font-weight:800; margin-top:10px; border:none; font-size:1.1rem;"><span>TOTAL</span><span>$${total.toLocaleString()}</span></div>`;
   document.getElementById('summaryModal').style.display = 'flex';
   document.getElementById('confirmSend').onclick = () => {
-    let m = "🧾 *PEDIDO MAYORISTA - NANCAN*\n\n";
+    let m = "🧾 *PEDIDO - NANCAN*\n\n";
     keys.forEach(c => { const x = dbIndex[c]; m += `• *${x.d}* [${c}]\n  Cant: ${cart[c]} | Sub: $${(x.pm*cart[c]).toLocaleString()}\n\n`; });
-    m += `━━━━━━━━━━━━━━\n*TOTAL PEDIDO: $${total.toLocaleString()}*`;
+    m += `━━━━━━━━━━━━━━\n*TOTAL: $${total.toLocaleString()}*`;
     window.open(`https://wa.me/5492235527149?text=${encodeURIComponent(m)}`);
     document.getElementById('summaryModal').style.display = 'none';
   };
@@ -256,7 +267,10 @@ function scrollToProduct(c) {
   setTimeout(() => { const el = document.getElementById(`n-${c}`); if(el){ const card = el.closest('.prod-card'); card.scrollIntoView({behavior:'smooth', block:'center'}); card.classList.add('highlight'); setTimeout(()=>card.classList.remove('highlight'),1500); } }, 150);
 }
 
-window.onscroll = () => { document.getElementById('btnTop').style.display = (window.scrollY > 300) ? 'flex' : 'none'; };
+window.onscroll = () => { 
+    const scroll = window.scrollY > 300;
+    document.getElementById('btnTop').style.display = scroll ? 'flex' : 'none'; 
+};
 document.addEventListener('DOMContentLoaded', init);
 </script>
 </body>
